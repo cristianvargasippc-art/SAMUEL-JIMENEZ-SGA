@@ -7,69 +7,68 @@
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@300;400;600;700;900&family=Cormorant+Garamond:ital,wght@0,300;0,600;1,300&family=Share+Tech+Mono&display=swap" rel="stylesheet">
 <style>
 :root{--sky:#5bbfde;--sky-deep:#2a9dc5;--navy:#1a3a5c;--navy-deep:#0d1f35;--white:#fff;--gold:#f0c040;--green:#00ff88}
-*{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}html{scroll-behavior:smooth}
+*{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html{scroll-behavior:smooth}
 body{font-family:'Montserrat',sans-serif;background:var(--navy-deep);color:var(--white);overflow-x:hidden}
 
-/* BOARDING */
-#boarding{position:fixed;inset:0;z-index:9999;background:#020c18;display:flex;flex-direction:column;align-items:center;justify-content:center;overflow:hidden;transition:opacity 0.8s,transform 0.8s}
+/* ═══ BOARDING ═══ */
+#boarding{position:fixed;inset:0;z-index:9999;background:#020c18;display:flex;flex-direction:column;align-items:center;justify-content:center;overflow:hidden;transition:opacity .8s,transform .8s}
 #boarding.exit{opacity:0;transform:scale(1.04);pointer-events:none}
 .bs-scan{position:absolute;inset:0;background:repeating-linear-gradient(0deg,transparent,transparent 2px,rgba(0,0,0,.15) 2px,rgba(0,0,0,.15) 4px);pointer-events:none;z-index:1}
 .bs-glow{position:absolute;inset:0;background:radial-gradient(ellipse 80% 60% at 50% 50%,rgba(91,191,222,.07) 0%,transparent 70%);pointer-events:none}
-.bs-screen{position:relative;z-index:2;width:min(860px,92vw);border:1px solid rgba(91,191,222,.3);border-radius:4px;overflow:hidden;box-shadow:0 0 80px rgba(91,191,222,.2),0 0 200px rgba(91,191,222,.06),inset 0 0 60px rgba(0,0,0,.5)}
-.bs-topbar{background:#0a2a44;border-bottom:1px solid rgba(91,191,222,.2);padding:10px 24px;display:flex;align-items:center;justify-content:space-between}
+.bs-screen{position:relative;z-index:2;width:min(860px,94vw);border:1px solid rgba(91,191,222,.3);border-radius:6px;overflow:hidden;box-shadow:0 0 60px rgba(91,191,222,.18),inset 0 0 60px rgba(0,0,0,.4);display:flex;flex-direction:column}
+.bs-topbar{background:#0a2a44;border-bottom:1px solid rgba(91,191,222,.2);padding:10px 22px;display:flex;align-items:center;justify-content:space-between;flex-shrink:0}
 .bs-airline{font-family:'Share Tech Mono',monospace;font-size:11px;color:rgba(91,191,222,.7);letter-spacing:3px;text-transform:uppercase}
 .bs-time{font-family:'Share Tech Mono',monospace;font-size:11px;color:rgba(255,255,255,.4)}
 .bs-dot{width:6px;height:6px;border-radius:50%;background:var(--green);box-shadow:0 0 8px var(--green);animation:blink 1.5s ease-in-out infinite}
 @keyframes blink{0%,100%{opacity:1}50%{opacity:.3}}
-.bs-body{background:linear-gradient(180deg,#041221 0%,#071a30 50%,#041221 100%);padding:48px 40px 52px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:0}
-.bs-welcome-line{font-family:'Share Tech Mono',monospace;font-size:10px;color:rgba(91,191,222,.6);letter-spacing:4px;text-transform:uppercase;margin-bottom:12px;text-align:center;width:100%}
-.bs-welcome{font-family:'Bebas Neue',sans-serif;font-size:clamp(16px,2.5vw,22px);color:rgba(255,255,255,.45);letter-spacing:8px;line-height:1;margin-bottom:4px;text-align:center;width:100%}
-.bs-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(60px,10vw,108px);color:#fff;line-height:.85;letter-spacing:-1px;text-align:center;width:100%}
+.bs-body{background:linear-gradient(180deg,#041221 0%,#071a30 50%,#041221 100%);padding:36px 32px 32px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;flex:1}
+.bs-welcome-line{font-family:'Share Tech Mono',monospace;font-size:10px;color:rgba(91,191,222,.6);letter-spacing:4px;text-transform:uppercase;margin-bottom:10px}
+.bs-welcome{font-family:'Bebas Neue',sans-serif;font-size:clamp(14px,2.5vw,22px);color:rgba(255,255,255,.45);letter-spacing:8px;line-height:1;margin-bottom:4px}
+.bs-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(56px,12vw,108px);color:#fff;line-height:.88;letter-spacing:-1px}
 .bs-title .hl{color:var(--sky)}
-.bs-div{width:60px;height:1px;background:rgba(91,191,222,.4);margin:18px auto}
-.bs-fi{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;width:100%;max-width:500px;margin:0 auto}
-.bs-fi-item{display:flex;flex-direction:column;gap:3px;align-items:center;text-align:center}
-.bs-fi-label{font-family:'Share Tech Mono',monospace;font-size:9px;color:rgba(91,191,222,.5);letter-spacing:2px;text-transform:uppercase;text-align:center}
-.bs-fi-value{font-family:'Share Tech Mono',monospace;font-size:14px;color:#fff;letter-spacing:1px;text-align:center}
+.bs-div{width:60px;height:1px;background:rgba(91,191,222,.4);margin:16px auto}
+.bs-fi{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;width:100%;max-width:480px;margin:0 auto}
+.bs-fi-item{display:flex;flex-direction:column;gap:4px;align-items:center}
+.bs-fi-label{font-family:'Share Tech Mono',monospace;font-size:9px;color:rgba(91,191,222,.5);letter-spacing:2px;text-transform:uppercase}
+.bs-fi-value{font-family:'Share Tech Mono',monospace;font-size:14px;color:#fff;letter-spacing:1px}
 .bs-fi-value.g{color:var(--green)}
-.bs-plane-wrap{display:none}
-.bs-plane-wrap svg{width:200px;filter:drop-shadow(0 0 18px rgba(91,191,222,.4))}
-.bs-bottom{border-top:1px solid rgba(91,191,222,.15);background:#041221;padding:16px 40px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.bs-bottom{border-top:1px solid rgba(91,191,222,.15);background:#041221;padding:14px 22px;display:flex;align-items:center;justify-content:space-between;gap:14px;flex-shrink:0;flex-wrap:wrap}
 .bs-board-txt{font-family:'Share Tech Mono',monospace;font-size:10px;color:rgba(255,255,255,.45);letter-spacing:2px;white-space:nowrap}
 .bs-board-txt span{color:var(--green)}
-.bs-bar{width:200px;height:3px;background:rgba(255,255,255,.1);border-radius:2px;overflow:hidden;flex-shrink:0}
+.bs-bar{width:160px;height:3px;background:rgba(255,255,255,.1);border-radius:2px;overflow:hidden;flex-shrink:0}
 .bs-bar-fill{height:100%;background:linear-gradient(90deg,var(--sky),var(--green));width:0%;transition:width .08s linear}
-.bs-enter{padding:12px 30px;background:var(--sky);border:none;border-radius:3px;font-family:'Montserrat',sans-serif;font-weight:900;font-size:11px;letter-spacing:3px;text-transform:uppercase;color:var(--navy-deep);cursor:pointer;opacity:0;pointer-events:none;transition:all .4s;white-space:nowrap}
+.bs-enter{padding:11px 26px;background:var(--sky);border:none;border-radius:3px;font-family:'Montserrat',sans-serif;font-weight:900;font-size:11px;letter-spacing:3px;text-transform:uppercase;color:var(--navy-deep);cursor:pointer;opacity:0;pointer-events:none;transition:all .4s;white-space:nowrap}
 .bs-enter.ready{opacity:1;pointer-events:all}
 .bs-enter:hover{background:#fff;transform:translateY(-2px)}
-.bs-ticker{position:absolute;bottom:0;left:0;right:0;z-index:2;background:#041a2e;border-top:1px solid rgba(91,191,222,.12);padding:7px 0;overflow:hidden}
+.bs-ticker{position:relative;z-index:2;background:#041a2e;border-top:1px solid rgba(91,191,222,.12);padding:7px 0;overflow:hidden;flex-shrink:0}
 .bs-ticker-inner{display:inline-flex;gap:60px;white-space:nowrap;animation:ticker 20s linear infinite;font-family:'Share Tech Mono',monospace;font-size:10px;color:rgba(91,191,222,.5);letter-spacing:2px;padding-left:100%}
 @keyframes ticker{from{transform:translateX(0)}to{transform:translateX(-50%)}}
 
-/* NAV */
-.nav-admin-btn{padding:8px 20px;background:transparent;border:1.5px solid var(--sky);border-radius:4px;color:var(--sky);font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;cursor:pointer;transition:all .3s;font-family:'Montserrat',sans-serif;white-space:nowrap}
+/* ═══ NAV ═══ */
+.nav-admin-btn{padding:8px 18px;background:transparent;border:1.5px solid var(--sky);border-radius:4px;color:var(--sky);font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;cursor:pointer;transition:all .3s;font-family:'Montserrat',sans-serif;white-space:nowrap}
 .nav-admin-btn:hover{background:var(--sky);color:var(--navy-deep)}
-nav{position:fixed;top:0;left:0;right:0;z-index:1000;padding:18px 40px;display:flex;align-items:center;justify-content:space-between;background:rgba(13,31,53,.8);backdrop-filter:blur(14px);border-bottom:1px solid rgba(91,191,222,.12);transition:all .4s}
-nav.scrolled{padding:12px 40px;background:rgba(7,16,30,.97)}
-.nav-logo{display:flex;align-items:center;gap:12px;text-decoration:none}
-.nav-mark{width:36px;height:36px;background:var(--sky);border-radius:6px;display:flex;align-items:center;justify-content:center;font-family:'Bebas Neue',sans-serif;font-size:21px;color:#fff;position:relative;overflow:hidden}
+nav{position:fixed;top:0;left:0;right:0;z-index:1000;padding:16px 40px;display:flex;align-items:center;justify-content:space-between;background:rgba(13,31,53,.8);backdrop-filter:blur(14px);border-bottom:1px solid rgba(91,191,222,.12);transition:all .4s;gap:16px}
+nav.scrolled{padding:11px 40px;background:rgba(7,16,30,.97)}
+.nav-logo{display:flex;align-items:center;gap:10px;text-decoration:none;flex-shrink:0}
+.nav-mark{width:34px;height:34px;background:var(--sky);border-radius:6px;display:flex;align-items:center;justify-content:center;font-family:'Bebas Neue',sans-serif;font-size:20px;color:#fff;position:relative;overflow:hidden}
 .nav-mark::after{content:'';position:absolute;top:0;left:-100%;width:60%;height:100%;background:rgba(255,255,255,.3);transform:skewX(-20deg);animation:shimmer 3s infinite}
 @keyframes shimmer{0%,100%{left:-100%}50%{left:150%}}
-.nav-brand{font-family:'Bebas Neue',sans-serif;font-size:19px;letter-spacing:2px;color:#fff}
+.nav-brand{font-family:'Bebas Neue',sans-serif;font-size:18px;letter-spacing:2px;color:#fff}
 .nav-brand span{color:var(--sky)}
-.nav-links{display:flex;gap:30px;list-style:none}
-.nav-links a{color:rgba(255,255,255,.6);text-decoration:none;font-size:10px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;transition:color .3s;position:relative}
+.nav-links{display:flex;gap:28px;list-style:none}
+.nav-links a{color:rgba(255,255,255,.6);text-decoration:none;font-size:10px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;transition:color .3s;position:relative;white-space:nowrap}
 .nav-links a::after{content:'';position:absolute;bottom:-4px;left:0;right:100%;height:1px;background:var(--sky);transition:right .3s}
 .nav-links a:hover{color:var(--sky)}.nav-links a:hover::after{right:0}
-.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;flex-shrink:0}
 .hamburger span{display:block;width:24px;height:2px;background:var(--sky)}
-.mobile-menu{display:none;position:fixed;inset:0;z-index:999;background:rgba(7,16,30,.98);backdrop-filter:blur(20px);flex-direction:column;align-items:center;justify-content:center;gap:24px;padding:20px;overflow-y:auto}
+.mobile-menu{display:none;position:fixed;inset:0;z-index:999;background:rgba(7,16,30,.98);backdrop-filter:blur(20px);flex-direction:column;align-items:center;justify-content:center;gap:22px;padding:20px;overflow-y:auto}
 .mobile-menu.open{display:flex}
 .mobile-menu a{font-family:'Bebas Neue',sans-serif;font-size:clamp(28px,8vw,38px);letter-spacing:3px;color:#fff;text-decoration:none;transition:color .3s}
 .mobile-menu a:hover{color:var(--sky)}
-.mobile-close{position:absolute;top:22px;right:22px;font-size:28px;color:#fff;background:none;border:none;cursor:pointer}
+.mobile-close{position:absolute;top:20px;right:20px;font-size:26px;color:#fff;background:none;border:none;cursor:pointer}
 
-/* HERO */
+/* ═══ HERO ═══ */
 #hero{min-height:100svh;position:relative;display:flex;align-items:center;overflow:hidden;background:linear-gradient(155deg,#060e18 0%,#0d1f35 35%,#1a4060 65%,#2a7a9a 100%)}
 .hero-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(91,191,222,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(91,191,222,.04) 1px,transparent 1px);background-size:70px 70px;animation:gridDrift 25s linear infinite}
 @keyframes gridDrift{from{background-position:0 0}to{background-position:70px 70px}}
@@ -78,60 +77,60 @@ nav.scrolled{padding:12px 40px;background:rgba(7,16,30,.97)}
 .orb2{width:400px;height:400px;bottom:-50px;left:-50px;background:rgba(42,125,197,.1)}
 .hero-plane-wrap{position:absolute;right:0;bottom:0;width:min(55vw,680px);animation:planeDrift 9s ease-in-out infinite;pointer-events:none}
 @keyframes planeDrift{0%,100%{transform:translateY(0) rotate(-6deg)}50%{transform:translateY(-22px) rotate(-4deg)}}
-.hero-content{position:relative;z-index:5;padding:0 6vw;max-width:1300px;margin:0 auto;width:100%;padding-top:110px}
-.hero-eyebrow{display:inline-flex;align-items:center;gap:10px;background:rgba(91,191,222,.1);border:1px solid rgba(91,191,222,.35);border-radius:100px;padding:6px 20px;font-size:10px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--sky);margin-bottom:28px;animation:fadeUp .8s ease both}
-.hero-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(60px,10vw,150px);line-height:.88;letter-spacing:-2px;animation:fadeUp .8s .15s ease both}
-.hero-title .outline{color:transparent;-webkit-text-stroke:clamp(1px,0.3vw,2px) var(--sky);display:block}
+.hero-content{position:relative;z-index:5;padding:0 6vw;max-width:1300px;margin:0 auto;width:100%;padding-top:100px}
+.hero-eyebrow{display:inline-flex;align-items:center;gap:10px;background:rgba(91,191,222,.1);border:1px solid rgba(91,191,222,.35);border-radius:100px;padding:6px 18px;font-size:10px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--sky);margin-bottom:24px;animation:fadeUp .8s ease both}
+.hero-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(56px,10vw,150px);line-height:.88;letter-spacing:-2px;animation:fadeUp .8s .15s ease both}
+.hero-title .outline{color:transparent;-webkit-text-stroke:clamp(1px,.3vw,2px) var(--sky);display:block}
 .hero-title .solid{color:var(--sky)}
-.hero-sub{font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:300;font-size:clamp(18px,2.5vw,28px);color:rgba(255,255,255,.65);margin-top:20px;max-width:560px;animation:fadeUp .8s .3s ease both}
-.hero-ctas{display:flex;gap:14px;flex-wrap:wrap;margin-top:38px;animation:fadeUp .8s .45s ease both}
-.btn-p{display:inline-flex;align-items:center;gap:10px;padding:15px 36px;background:var(--sky);color:var(--navy-deep);font-weight:900;font-size:11px;letter-spacing:2.5px;text-transform:uppercase;border:none;border-radius:4px;cursor:pointer;text-decoration:none;transition:all .3s}
+.hero-sub{font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:300;font-size:clamp(17px,2.5vw,28px);color:rgba(255,255,255,.65);margin-top:16px;max-width:560px;animation:fadeUp .8s .3s ease both}
+.hero-ctas{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px;animation:fadeUp .8s .45s ease both}
+.btn-p{display:inline-flex;align-items:center;gap:10px;padding:14px 32px;background:var(--sky);color:var(--navy-deep);font-weight:900;font-size:11px;letter-spacing:2.5px;text-transform:uppercase;border:none;border-radius:4px;cursor:pointer;text-decoration:none;transition:all .3s}
 .btn-p:hover{transform:translateY(-2px);box-shadow:0 12px 40px rgba(91,191,222,.35);background:#fff}
-.btn-o{display:inline-flex;align-items:center;gap:10px;padding:15px 36px;background:transparent;color:#fff;font-weight:700;font-size:11px;letter-spacing:2.5px;text-transform:uppercase;border:1.5px solid rgba(255,255,255,.25);border-radius:4px;text-decoration:none;transition:all .3s}
+.btn-o{display:inline-flex;align-items:center;gap:10px;padding:14px 32px;background:transparent;color:#fff;font-weight:700;font-size:11px;letter-spacing:2.5px;text-transform:uppercase;border:1.5px solid rgba(255,255,255,.25);border-radius:4px;text-decoration:none;transition:all .3s}
 .btn-o:hover{border-color:var(--sky);color:var(--sky)}
-.hero-stats{display:flex;gap:48px;flex-wrap:wrap;margin-top:60px;padding-top:36px;border-top:1px solid rgba(255,255,255,.08);animation:fadeUp .8s .6s ease both}
-.stat-num{font-family:'Bebas Neue',sans-serif;font-size:50px;color:var(--sky);line-height:1}
+.hero-stats{display:flex;gap:40px;flex-wrap:wrap;margin-top:50px;padding-top:30px;border-top:1px solid rgba(255,255,255,.08);animation:fadeUp .8s .6s ease both}
+.stat-num{font-family:'Bebas Neue',sans-serif;font-size:48px;color:var(--sky);line-height:1}
 .stat-lbl{font-size:10px;font-weight:700;letter-spacing:2px;color:rgba(255,255,255,.4);text-transform:uppercase;margin-top:2px}
 @keyframes fadeUp{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:translateY(0)}}
-.scroll-ind{position:absolute;bottom:28px;left:50%;transform:translateX(-50%)}
-.scroll-line{width:1px;height:56px;background:linear-gradient(to bottom,transparent,var(--sky));animation:sp 2s ease-in-out infinite}
+.scroll-ind{position:absolute;bottom:24px;left:50%;transform:translateX(-50%)}
+.scroll-line{width:1px;height:52px;background:linear-gradient(to bottom,transparent,var(--sky));animation:sp 2s ease-in-out infinite}
 @keyframes sp{0%,100%{opacity:.3}50%{opacity:1}}
 
-/* SECTIONS */
+/* ═══ SECTIONS ═══ */
 section{position:relative}
 .sec-label{display:flex;align-items:center;justify-content:center;gap:10px;font-size:10px;font-weight:700;letter-spacing:4px;text-transform:uppercase;color:var(--sky);margin-bottom:14px;text-align:center}
 .sec-label::before,.sec-label::after{content:'';display:block;width:28px;height:1px;background:var(--sky)}
-.sec-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(40px,6vw,78px);line-height:.95;letter-spacing:1px;text-align:center}
+.sec-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(38px,6vw,78px);line-height:.95;letter-spacing:1px;text-align:center}
 .sec-intro{font-size:15px;color:rgba(255,255,255,.52);line-height:1.75;max-width:570px;margin:14px auto 0;text-align:center}
 
-/* CAUSA */
-#causa{padding:130px 6vw;background:#fff;color:var(--navy-deep);clip-path:polygon(0 5%,100% 0,100% 95%,0 100%)}
+/* ═══ CAUSA ═══ */
+#causa{padding:120px 6vw;background:#fff;color:var(--navy-deep);clip-path:polygon(0 5%,100% 0,100% 95%,0 100%)}
 #causa .sec-label{color:var(--sky-deep)}
 #causa .sec-label::before,#causa .sec-label::after{background:var(--sky-deep)}
 #causa .sec-title{color:var(--navy-deep)}
-.causa-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;max-width:1140px;margin:56px auto 0}
+.causa-grid{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center;max-width:1140px;margin:52px auto 0}
 .causa-text p{font-size:16px;line-height:1.85;color:#3a4a5c;margin-bottom:16px;font-weight:300}
-.causa-vis{position:relative;height:440px}
-.ccard{position:absolute;border-radius:14px;padding:28px;box-shadow:0 24px 60px rgba(13,31,53,.22)}
+.causa-vis{position:relative;height:420px}
+.ccard{position:absolute;border-radius:14px;padding:26px;box-shadow:0 24px 60px rgba(13,31,53,.22)}
 .ccard-m{top:0;left:0;right:0;background:linear-gradient(135deg,var(--navy-deep),var(--navy));color:#fff}
 .ccard-s{bottom:0;left:30px;right:-10px;background:linear-gradient(135deg,var(--sky),var(--sky-deep));color:#fff;z-index:2}
-.ccard-num{font-family:'Bebas Neue',sans-serif;font-size:70px;line-height:1;color:var(--sky)}
-.ccard-s .ccard-num{color:rgba(255,255,255,.9);font-size:52px}
+.ccard-num{font-family:'Bebas Neue',sans-serif;font-size:68px;line-height:1;color:var(--sky)}
+.ccard-s .ccard-num{color:rgba(255,255,255,.9);font-size:50px}
 .ccard-txt{font-size:13px;line-height:1.65;opacity:.72;margin-top:8px}
 
-/* OBJETIVOS */
-#objetivos{padding:130px 6vw;background:var(--navy-deep);clip-path:polygon(0 0,100% 4%,100% 100%,0 96%)}
-.obj-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px;max-width:1140px;margin:52px auto 0}
-.obj-card{background:rgba(91,191,222,.05);border:1px solid rgba(91,191,222,.12);border-radius:12px;padding:32px 24px;transition:all .4s;position:relative;overflow:hidden}
+/* ═══ OBJETIVOS ═══ */
+#objetivos{padding:120px 6vw;background:var(--navy-deep);clip-path:polygon(0 0,100% 4%,100% 100%,0 96%)}
+.obj-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:18px;max-width:1140px;margin:48px auto 0}
+.obj-card{background:rgba(91,191,222,.05);border:1px solid rgba(91,191,222,.12);border-radius:12px;padding:30px 22px;transition:all .4s;position:relative;overflow:hidden}
 .obj-card::before{content:'';position:absolute;top:0;left:0;right:100%;height:2px;background:var(--sky);transition:right .4s}
 .obj-card:hover{transform:translateY(-6px);border-color:rgba(91,191,222,.35);background:rgba(91,191,222,.09)}
 .obj-card:hover::before{right:0}
-.obj-num{font-family:'Bebas Neue',sans-serif;font-size:50px;color:rgba(91,191,222,.12);line-height:1;margin-bottom:8px}
-.obj-card h3{font-family:'Bebas Neue',sans-serif;font-size:21px;letter-spacing:1px;color:var(--sky);margin-bottom:10px}
+.obj-num{font-family:'Bebas Neue',sans-serif;font-size:48px;color:rgba(91,191,222,.12);line-height:1;margin-bottom:8px}
+.obj-card h3{font-family:'Bebas Neue',sans-serif;font-size:20px;letter-spacing:1px;color:var(--sky);margin-bottom:10px}
 .obj-card p{font-size:13px;line-height:1.7;color:rgba(255,255,255,.58)}
 
-/* MAP */
-#mapa{padding:120px 6vw;background:linear-gradient(180deg,#07192e 0%,#0d2a42 100%);overflow:hidden}
+/* ═══ MAPA ═══ */
+#mapa{padding:110px 6vw;background:linear-gradient(180deg,#07192e 0%,#0d2a42 100%);overflow:hidden}
 .map-wrap{max-width:1140px;margin:0 auto;position:relative}
 .world-svg{width:100%;opacity:.6}
 .dest-pins{position:absolute;inset:0}
@@ -147,18 +146,18 @@ section{position:relative}
 .pin-dot{width:8px;height:8px;border-radius:50%;background:var(--sky);box-shadow:0 0 12px var(--sky)}
 .fp{stroke:rgba(91,191,222,.22);stroke-width:1;fill:none;stroke-dasharray:6 4;animation:dash 4s linear infinite}
 @keyframes dash{to{stroke-dashoffset:-20}}
-.route-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:14px;max-width:1140px;margin:40px auto 0}
-.route-card{background:rgba(91,191,222,.06);border:1px solid rgba(91,191,222,.14);border-radius:10px;padding:18px;text-align:center;transition:all .3s}
+.route-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px;max-width:1140px;margin:36px auto 0}
+.route-card{background:rgba(91,191,222,.06);border:1px solid rgba(91,191,222,.14);border-radius:10px;padding:16px;text-align:center;transition:all .3s}
 .route-card:hover{background:rgba(91,191,222,.12);border-color:rgba(91,191,222,.35);transform:translateY(-3px)}
-.route-code{font-family:'Bebas Neue',sans-serif;font-size:32px;color:var(--sky);line-height:1}
+.route-code{font-family:'Bebas Neue',sans-serif;font-size:30px;color:var(--sky);line-height:1}
 .route-name{font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:rgba(255,255,255,.45);margin-top:4px}
 .route-arr{font-size:14px;color:rgba(91,191,222,.35);margin:5px 0}
 .route-dest{font-size:12px;color:rgba(255,255,255,.65);font-weight:600}
 
-/* PROGRAMAS */
-#programas{padding:130px 6vw;background:linear-gradient(180deg,#0d1f35 0%,#071528 100%)}
-.prog-grid{display:grid;grid-template-columns:repeat(12,1fr);gap:18px;max-width:1140px;margin:0 auto;width:100%}
-.prog-card{border-radius:12px;padding:30px 24px;position:relative;overflow:hidden;cursor:pointer;transition:transform .4s;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);display:flex;flex-direction:column;justify-content:space-between;min-height:265px}
+/* ═══ PROGRAMAS ═══ */
+#programas{padding:120px 6vw;background:linear-gradient(180deg,#0d1f35 0%,#071528 100%)}
+.prog-grid{display:grid;grid-template-columns:repeat(12,1fr);gap:16px;max-width:1140px;margin:0 auto;width:100%}
+.prog-card{border-radius:12px;padding:28px 22px;position:relative;overflow:hidden;cursor:pointer;transition:transform .4s;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);display:flex;flex-direction:column;justify-content:space-between;min-height:260px}
 .prog-card:hover{transform:scale(1.02)}
 .prog-card.wide{grid-column:span 7}.prog-card.narrow{grid-column:span 5}.prog-card.third{grid-column:span 4}
 .prog-line{position:absolute;top:0;left:0;right:0;height:2px}
@@ -168,264 +167,238 @@ section{position:relative}
 .prog-card p{font-size:13px;line-height:1.7;color:rgba(255,255,255,.52);flex-grow:1}
 .prog-rm{display:inline-flex;align-items:center;gap:6px;margin-top:16px;font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--sky);cursor:pointer;transition:gap .3s;background:none;border:none;padding:0}
 .prog-rm:hover{gap:10px}.prog-rm::after{content:'→'}
-.prog-bg{position:absolute;bottom:-18px;right:8px;font-family:'Bebas Neue',sans-serif;font-size:110px;color:rgba(255,255,255,.025);pointer-events:none;line-height:1}
+.prog-bg{position:absolute;bottom:-16px;right:8px;font-family:'Bebas Neue',sans-serif;font-size:100px;color:rgba(255,255,255,.025);pointer-events:none;line-height:1}
 
-/* RECURSOS */
-#recursos{padding:120px 6vw;background:var(--sky);clip-path:polygon(0 6%,100% 0,100% 94%,0 100%);text-align:center}
+/* ═══ RECURSOS ═══ */
+#recursos{padding:110px 6vw;background:var(--sky);clip-path:polygon(0 6%,100% 0,100% 94%,0 100%);text-align:center}
 #recursos .sec-label{color:var(--navy)}
 #recursos .sec-label::before,#recursos .sec-label::after{background:var(--navy)}
 #recursos .sec-title{color:var(--navy-deep)}
 #recursos .sec-intro{color:rgba(26,58,92,.72)}
-.res-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:16px;max-width:940px;margin:48px auto 36px}
-.res-card{background:rgba(255,255,255,.42);border:1px solid rgba(255,255,255,.7);border-radius:12px;padding:24px 18px;text-align:left;backdrop-filter:blur(8px);transition:all .3s;cursor:pointer}
+.res-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:14px;max-width:920px;margin:44px auto 32px}
+.res-card{background:rgba(255,255,255,.42);border:1px solid rgba(255,255,255,.7);border-radius:12px;padding:22px 16px;text-align:left;backdrop-filter:blur(8px);transition:all .3s;cursor:pointer}
 .res-card:hover{background:#fff;transform:translateY(-4px);box-shadow:0 18px 50px rgba(26,58,92,.2)}
 .res-card h4{font-size:14px;font-weight:700;color:var(--navy-deep);margin-bottom:5px}
 .res-card p{font-size:12px;color:rgba(26,58,92,.58);line-height:1.5}
-.preview-wrap{max-width:940px;margin:0 auto 36px;border-radius:12px;overflow:hidden;border:2px solid rgba(255,255,255,.5);box-shadow:0 28px 70px rgba(13,31,53,.28)}
+.preview-wrap{max-width:920px;margin:0 auto 32px;border-radius:12px;overflow:hidden;border:2px solid rgba(255,255,255,.5);box-shadow:0 24px 60px rgba(13,31,53,.25)}
 .prev-bar{background:rgba(26,58,92,.85);padding:10px 16px;display:flex;align-items:center;gap:10px}
 .pdots{display:flex;gap:5px}.pdots span{width:11px;height:11px;border-radius:50%}
 .pd1{background:#ff5f57}.pd2{background:#febc2e}.pd3{background:#28c840}
 .purl{flex:1;background:rgba(255,255,255,.1);border-radius:5px;padding:5px 12px;font-size:10px;color:rgba(255,255,255,.5);font-family:monospace}
-#driveFrame{width:100%;height:450px;border:none;background:#f1f3f4;display:none}
-.frame-ph{width:100%;height:450px;background:linear-gradient(135deg,#1a3a5c,#0d2a42);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;color:rgba(255,255,255,.32)}
+#driveFrame{width:100%;height:440px;border:none;background:#f1f3f4;display:none}
+.frame-ph{width:100%;height:440px;background:linear-gradient(135deg,#1a3a5c,#0d2a42);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;color:rgba(255,255,255,.32)}
 .frame-ph p{font-size:13px;max-width:270px;text-align:center;line-height:1.6}
-.drive-btn{display:inline-flex;align-items:center;gap:10px;padding:15px 36px;background:var(--navy-deep);color:#fff;font-weight:700;font-size:11px;letter-spacing:2.5px;text-transform:uppercase;border-radius:5px;text-decoration:none;border:none;cursor:pointer;transition:all .3s}
+.drive-btn{display:inline-flex;align-items:center;gap:10px;padding:14px 34px;background:var(--navy-deep);color:#fff;font-weight:700;font-size:11px;letter-spacing:2.5px;text-transform:uppercase;border-radius:5px;text-decoration:none;border:none;cursor:pointer;transition:all .3s}
 .drive-btn:hover{background:var(--navy);transform:translateY(-2px);box-shadow:0 10px 36px rgba(13,31,53,.3)}
 
-/* FOOTER */
-footer{padding:54px 6vw 34px;background:#040d18;text-align:center;border-top:1px solid rgba(91,191,222,.08)}
-.ft-logo{font-family:'Bebas Neue',sans-serif;font-size:48px;color:var(--sky);letter-spacing:4px}
-.ft-tag{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:17px;color:rgba(255,255,255,.32);margin-top:6px}
+/* ═══ FOOTER ═══ */
+footer{padding:50px 6vw 32px;background:#040d18;text-align:center;border-top:1px solid rgba(91,191,222,.08)}
+.ft-logo{font-family:'Bebas Neue',sans-serif;font-size:46px;color:var(--sky);letter-spacing:4px}
+.ft-tag{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:16px;color:rgba(255,255,255,.32);margin-top:6px}
 .ft-sub{font-size:10px;letter-spacing:3px;color:rgba(255,255,255,.18);text-transform:uppercase;margin-top:4px}
-.ft-div{height:1px;background:rgba(255,255,255,.06);max-width:360px;margin:26px auto}
+.ft-div{height:1px;background:rgba(255,255,255,.06);max-width:360px;margin:24px auto}
 .ft-copy{font-size:10px;color:rgba(255,255,255,.13)}
 
-/* ADMIN LOGIN */
-#adminLogin{display:none;position:fixed;inset:0;z-index:8000;background:rgba(2,6,14,.96);backdrop-filter:blur(20px);align-items:center;justify-content:center}
+/* ═══ ADMIN LOGIN ═══ */
+#adminLogin{display:none;position:fixed;inset:0;z-index:8000;background:rgba(2,6,14,.96);backdrop-filter:blur(20px);align-items:center;justify-content:center;padding:20px}
 #adminLogin.active{display:flex}
-.login-box{background:var(--navy-deep);border:1px solid rgba(91,191,222,.25);border-radius:16px;padding:50px 42px;width:min(400px,90vw);box-shadow:0 40px 100px rgba(0,0,0,.6);animation:modalIn .4s cubic-bezier(.34,1.56,.64,1) both;position:relative}
+.login-box{background:var(--navy-deep);border:1px solid rgba(91,191,222,.25);border-radius:16px;padding:48px 40px;width:min(400px,94vw);box-shadow:0 40px 100px rgba(0,0,0,.6);animation:modalIn .4s cubic-bezier(.34,1.56,.64,1) both;position:relative}
 .login-logo{font-family:'Bebas Neue',sans-serif;font-size:40px;color:var(--sky);text-align:center;letter-spacing:3px}
-.login-sub{text-align:center;font-size:10px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:rgba(255,255,255,.28);margin-top:4px;margin-bottom:34px}
-.login-field{display:flex;flex-direction:column;gap:7px;margin-bottom:16px}
+.login-sub{text-align:center;font-size:10px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:rgba(255,255,255,.28);margin-top:4px;margin-bottom:32px}
+.login-field{display:flex;flex-direction:column;gap:7px;margin-bottom:14px}
 .login-field label{font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.4)}
-.login-field input{background:rgba(255,255,255,.05);border:1px solid rgba(91,191,222,.2);border-radius:7px;padding:13px 15px;color:#fff;font-family:'Montserrat',sans-serif;font-size:14px;outline:none;transition:border-color .3s}
+.login-field input{background:rgba(255,255,255,.05);border:1px solid rgba(91,191,222,.2);border-radius:7px;padding:13px 15px;color:#fff;font-family:'Montserrat',sans-serif;font-size:14px;outline:none;transition:border-color .3s;-webkit-appearance:none}
 .login-field input:focus{border-color:var(--sky);background:rgba(91,191,222,.07)}
 .login-btn{width:100%;padding:14px;background:var(--sky);border:none;border-radius:7px;color:var(--navy-deep);font-family:'Montserrat',sans-serif;font-weight:900;font-size:12px;letter-spacing:2.5px;text-transform:uppercase;cursor:pointer;transition:all .3s;margin-top:4px}
 .login-btn:hover{background:#fff}
 .login-err{display:none;color:#ff5555;font-size:11px;text-align:center;margin-top:10px}
-.login-x{position:absolute;top:18px;right:18px;width:32px;height:32px;background:rgba(255,255,255,.06);border:none;border-radius:50%;color:#fff;font-size:15px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all .3s}
+.login-x{position:absolute;top:16px;right:16px;width:32px;height:32px;background:rgba(255,255,255,.06);border:none;border-radius:50%;color:#fff;font-size:15px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all .3s}
 .login-x:hover{background:rgba(255,85,85,.2);color:#ff5555}
 
-/* ADMIN PANEL */
+/* ═══ ADMIN PANEL ═══ */
 #adminPanel{display:none;position:fixed;inset:0;z-index:7000;background:rgba(2,6,14,.97);backdrop-filter:blur(20px);overflow-y:auto;-webkit-overflow-scrolling:touch}
 #adminPanel.active{display:block}
-.admin-inner{max-width:860px;margin:0 auto;padding:58px 24px}
-.admin-bar{display:flex;align-items:center;justify-content:space-between;margin-bottom:42px;padding-bottom:22px;border-bottom:1px solid rgba(91,191,222,.14)}
+.admin-inner{max-width:860px;margin:0 auto;padding:52px 20px}
+.admin-bar{display:flex;align-items:center;justify-content:space-between;margin-bottom:40px;padding-bottom:20px;border-bottom:1px solid rgba(91,191,222,.14);flex-wrap:wrap;gap:14px}
 .admin-bar h2{font-family:'Bebas Neue',sans-serif;font-size:40px;color:#fff}
 .admin-bar p{font-size:12px;color:rgba(255,255,255,.38);margin-top:2px}
 .admin-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(240,192,64,.1);border:1px solid rgba(240,192,64,.28);border-radius:100px;padding:6px 15px;font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--gold)}
-.logout-btn{padding:10px 20px;background:rgba(255,85,85,.1);border:1px solid rgba(255,85,85,.28);border-radius:6px;color:#ff5555;font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;cursor:pointer;transition:all .3s}
+.logout-btn{padding:10px 18px;background:rgba(255,85,85,.1);border:1px solid rgba(255,85,85,.28);border-radius:6px;color:#ff5555;font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;cursor:pointer;transition:all .3s}
 .logout-btn:hover{background:rgba(255,85,85,.2)}
 .aform{display:flex;flex-direction:column;gap:16px}
 .frow{display:grid;grid-template-columns:1fr 1fr;gap:16px}
 .fg{display:flex;flex-direction:column;gap:7px}
 .fg label{font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.4)}
-.fg input,.fg textarea,.fg select{background:rgba(255,255,255,.04);border:1px solid rgba(91,191,222,.18);border-radius:8px;padding:12px 15px;color:#fff;font-family:'Montserrat',sans-serif;font-size:13px;outline:none;transition:border-color .3s;width:100%}
+.fg input,.fg textarea,.fg select{background:rgba(255,255,255,.04);border:1px solid rgba(91,191,222,.18);border-radius:8px;padding:12px 15px;color:#fff;font-family:'Montserrat',sans-serif;font-size:13px;outline:none;transition:border-color .3s;width:100%;-webkit-appearance:none}
 .fg input:focus,.fg textarea:focus,.fg select:focus{border-color:var(--sky);background:rgba(91,191,222,.07)}
 .fg select option{background:var(--navy-deep)}
 .fg textarea{resize:vertical;min-height:88px}
 .drow{display:flex;gap:10px}.drow input{flex:1}
-.verify-btn{padding:0 16px;background:rgba(91,191,222,.08);border:1px solid var(--sky);border-radius:8px;color:var(--sky);font-size:10px;font-weight:700;cursor:pointer;transition:all .3s;white-space:nowrap}
+.verify-btn{padding:0 16px;background:rgba(91,191,222,.08);border:1px solid var(--sky);border-radius:8px;color:var(--sky);font-size:10px;font-weight:700;cursor:pointer;transition:all .3s;white-space:nowrap;font-family:'Montserrat',sans-serif}
 .verify-btn:hover{background:var(--sky);color:var(--navy-deep)}
 .sub-btn{padding:15px;background:linear-gradient(135deg,var(--sky),var(--sky-deep));border:none;border-radius:8px;color:var(--navy-deep);font-family:'Montserrat',sans-serif;font-size:12px;font-weight:900;letter-spacing:2.5px;text-transform:uppercase;cursor:pointer;transition:all .3s;margin-top:4px}
 .sub-btn:hover{transform:translateY(-2px);box-shadow:0 10px 30px rgba(91,191,222,.3)}
-.res-list{margin-top:42px}
-.res-list-title{font-family:'Bebas Neue',sans-serif;font-size:25px;color:#fff;margin-bottom:18px;padding-top:28px;border-top:1px solid rgba(255,255,255,.06)}
-.res-item{display:flex;align-items:center;justify-content:space-between;padding:13px 16px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06);border-radius:9px;margin-bottom:9px;transition:all .3s}
+.res-list{margin-top:40px}
+.res-list-title{font-family:'Bebas Neue',sans-serif;font-size:24px;color:#fff;margin-bottom:16px;padding-top:26px;border-top:1px solid rgba(255,255,255,.06)}
+.res-item{display:flex;align-items:center;justify-content:space-between;padding:13px 16px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06);border-radius:9px;margin-bottom:9px;transition:all .3s;gap:12px}
 .res-item:hover{border-color:rgba(91,191,222,.22);background:rgba(91,191,222,.04)}
 .res-name{font-weight:700;font-size:13px;color:#fff}
 .res-meta{font-size:10px;color:rgba(255,255,255,.32);margin-top:3px}
-.res-btns{display:flex;gap:8px}
+.res-btns{display:flex;gap:8px;flex-shrink:0}
 .icon-btn{width:34px;height:34px;border-radius:7px;border:1px solid rgba(255,255,255,.1);background:transparent;color:rgba(255,255,255,.42);cursor:pointer;transition:all .3s;display:flex;align-items:center;justify-content:center;font-size:13px}
 .icon-btn:hover{border-color:var(--sky);color:var(--sky);background:rgba(91,191,222,.1)}
 .icon-btn.del:hover{border-color:#ff5555;color:#ff5555;background:rgba(255,85,85,.1)}
 
-/* MODAL */
-.modal-ov{display:none;position:fixed;inset:0;z-index:6000;background:rgba(0,0,0,.82);backdrop-filter:blur(12px);align-items:center;justify-content:center;padding:20px}
+/* ═══ MODAL ═══ */
+.modal-ov{display:none;position:fixed;inset:0;z-index:6000;background:rgba(0,0,0,.82);backdrop-filter:blur(12px);align-items:center;justify-content:center;padding:16px}
 .modal-ov.active{display:flex}
-.modal{background:var(--navy-deep);border:1px solid rgba(91,191,222,.24);border-radius:16px;padding:44px;max-width:640px;width:100%;max-height:90vh;overflow-y:auto;position:relative;animation:modalIn .35s cubic-bezier(.34,1.56,.64,1) both;-webkit-overflow-scrolling:touch}
+.modal{background:var(--navy-deep);border:1px solid rgba(91,191,222,.24);border-radius:16px;padding:40px;max-width:640px;width:100%;max-height:90vh;overflow-y:auto;position:relative;animation:modalIn .35s cubic-bezier(.34,1.56,.64,1) both;-webkit-overflow-scrolling:touch}
 @keyframes modalIn{from{opacity:0;transform:scale(.9) translateY(18px)}to{opacity:1;transform:scale(1) translateY(0)}}
-.modal-x{position:absolute;top:16px;right:16px;width:32px;height:32px;background:rgba(255,255,255,.06);border:none;border-radius:50%;color:#fff;font-size:15px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all .3s}
+.modal-x{position:absolute;top:14px;right:14px;width:32px;height:32px;background:rgba(255,255,255,.06);border:none;border-radius:50%;color:#fff;font-size:15px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all .3s}
 .modal-x:hover{background:rgba(255,85,85,.2);color:#ff5555}
 .modal-tag{display:inline-block;padding:3px 12px;border-radius:100px;font-size:9px;font-weight:700;letter-spacing:2px;text-transform:uppercase;background:rgba(91,191,222,.12);color:var(--sky);margin-bottom:12px}
-.modal h2{font-family:'Bebas Neue',sans-serif;font-size:38px;color:#fff;margin-bottom:16px;line-height:1}
+.modal h2{font-family:'Bebas Neue',sans-serif;font-size:36px;color:#fff;margin-bottom:16px;line-height:1}
 .modal p{font-size:14px;line-height:1.8;color:rgba(255,255,255,.66);margin-bottom:13px}
-.modal-cta{display:inline-flex;align-items:center;gap:10px;margin-top:14px;padding:12px 24px;background:var(--sky);color:var(--navy-deep);font-weight:800;font-size:11px;letter-spacing:2px;text-transform:uppercase;border-radius:6px;text-decoration:none;transition:all .3s}
+.modal-cta{display:inline-flex;align-items:center;gap:10px;margin-top:14px;padding:12px 22px;background:var(--sky);color:var(--navy-deep);font-weight:800;font-size:11px;letter-spacing:2px;text-transform:uppercase;border-radius:6px;text-decoration:none;transition:all .3s}
 .modal-cta:hover{background:#fff;transform:translateY(-2px)}
 
-/* REVEAL */
-.reveal{opacity:0;transform:translateY(34px);transition:opacity .7s ease,transform .7s ease}
+/* ═══ REVEAL ═══ */
+.reveal{opacity:0;transform:translateY(32px);transition:opacity .7s ease,transform .7s ease}
 .reveal.visible{opacity:1;transform:translateY(0)}
 
-/* RESPONSIVE */
-
-/* ── TABLET & MOBILE (≤900px) ── */
+/* ═══ RESPONSIVE TABLET (≤900px) ═══ */
 @media(max-width:900px){
-  /* NAV */
   .nav-links,.nav-admin-btn{display:none}
   .hamburger{display:flex}
-  nav{padding:14px 20px}
+  nav{padding:12px 20px}
   nav.scrolled{padding:10px 20px}
-
-  /* BOARDING */
-  .bs-screen{width:96vw}
-  .bs-topbar{padding:8px 16px}
-  .bs-airline{font-size:9px;letter-spacing:1.5px}
-  .bs-body{padding:28px 20px 32px}
-  .bs-fi{grid-template-columns:1fr 1fr;gap:14px}
-  .bs-bottom{padding:12px 20px;gap:12px;flex-wrap:wrap;justify-content:center}
-  .bs-bar{width:100%;order:3}
-  .bs-board-txt{font-size:9px}
-
-  /* HERO */
-  .hero-content{padding:0 5vw;padding-top:90px}
-  .hero-plane-wrap{width:75vw;opacity:.12;bottom:-20px}
-  .hero-stats{gap:24px;margin-top:40px;padding-top:24px}
-  .stat-num{font-size:38px}
-
-  /* CAUSA */
-  #causa{padding:80px 5vw;clip-path:polygon(0 3%,100% 0,100% 97%,0 100%)}
   .causa-grid{grid-template-columns:1fr;gap:40px}
-  .causa-vis{height:280px}
+  .causa-vis{height:270px}
   .ccard-s{right:0;left:20px}
-  .ccard-num{font-size:52px}
-  .ccard-s .ccard-num{font-size:40px}
-
-  /* OBJETIVOS */
-  #objetivos{padding:80px 5vw;clip-path:polygon(0 0,100% 2%,100% 100%,0 98%)}
-  .obj-grid{grid-template-columns:1fr 1fr;gap:14px;margin-top:36px}
-
-  /* MAPA */
-  #mapa{padding:80px 5vw}
-  .dest-pin{display:none}
-  .route-cards{grid-template-columns:1fr 1fr;gap:12px}
-
-  /* PROGRAMAS */
-  #programas{padding:80px 5vw}
-  .prog-grid{gap:14px}
   .prog-card.wide,.prog-card.narrow,.prog-card.third{grid-column:span 12}
-  .prog-card{min-height:auto;padding:24px 20px}
-
-  /* RECURSOS */
-  #recursos{padding:80px 5vw;clip-path:polygon(0 4%,100% 0,100% 96%,0 100%)}
-  .res-cards{grid-template-columns:1fr 1fr;gap:12px;margin:32px auto 24px}
-  #driveFrame{height:320px}
-  .frame-ph{height:320px}
-
-  /* ADMIN PANEL */
-  .admin-inner{padding:40px 16px}
-  .admin-bar{flex-direction:column;align-items:flex-start;gap:16px}
+  .prog-card{min-height:auto}
   .frow{grid-template-columns:1fr}
-
-  /* MODAL */
-  .modal{padding:30px 20px}
-  .modal h2{font-size:30px}
-
-  /* LOGIN */
-  .login-box{padding:36px 24px}
 }
 
-/* ── SMALL MOBILE (≤600px) ── */
-@media(max-width:600px){
-  /* BOARDING */
-  .bs-screen{width:98vw;border-radius:3px}
-  .bs-title{font-size:clamp(48px,14vw,80px)}
-  .bs-fi{grid-template-columns:1fr 1fr;gap:10px}
-  .bs-fi-value{font-size:12px}
-  .bs-enter{padding:10px 20px;font-size:10px}
-  .bs-bottom{flex-direction:column;align-items:center;padding:12px 16px;gap:10px}
-  .bs-bar{width:80%}
+/* ═══ RESPONSIVE MOBILE (≤640px) ═══ */
+@media(max-width:640px){
+  /* BOARDING — full screen */
+  #boarding{padding:0}
+  .bs-screen{width:100%;height:100svh;border-radius:0;border-left:none;border-right:none;border-top:none}
+  .bs-topbar{padding:10px 16px}
+  .bs-airline{font-size:9px;letter-spacing:1px}
+  .bs-body{padding:18px 18px 14px;flex:1}
+  .bs-welcome-line{font-size:9px;letter-spacing:2px;margin-bottom:8px}
+  .bs-welcome{font-size:16px;letter-spacing:4px;margin-bottom:2px}
+  .bs-title{font-size:clamp(54px,16vw,84px)}
+  .bs-div{margin:12px auto}
+  .bs-fi{grid-template-columns:1fr 1fr;gap:8px 14px;max-width:320px}
+  .bs-fi-label{font-size:8px;letter-spacing:1px}
+  .bs-fi-value{font-size:13px}
+  .bs-bottom{padding:11px 16px;gap:8px}
+  .bs-bar{flex:1;min-width:60px}
+  .bs-board-txt{font-size:9px}
+  .bs-enter{padding:10px 18px;font-size:10px;letter-spacing:2px}
 
   /* NAV */
-  nav{padding:12px 16px}
+  nav{padding:11px 16px}
   .nav-brand{font-size:16px}
   .nav-mark{width:30px;height:30px;font-size:18px}
 
   /* HERO */
-  .hero-content{padding:0 5vw;padding-top:80px}
-  .hero-eyebrow{font-size:8px;letter-spacing:2px;padding:5px 14px}
-  .hero-sub{font-size:16px}
-  .hero-ctas{flex-direction:column;gap:10px}
-  .btn-p,.btn-o{width:100%;justify-content:center;padding:14px 20px}
-  .hero-stats{gap:18px}
+  .hero-content{padding:0 5vw;padding-top:72px}
+  .hero-eyebrow{font-size:8px;letter-spacing:2px;padding:5px 12px;margin-bottom:16px}
+  .hero-title{font-size:clamp(50px,14vw,80px);letter-spacing:-1px}
+  .hero-sub{font-size:clamp(15px,4vw,18px);margin-top:12px}
+  .hero-ctas{flex-direction:column;gap:10px;margin-top:22px}
+  .btn-p,.btn-o{width:100%;justify-content:center;padding:13px 18px}
+  .hero-stats{gap:16px;margin-top:28px;padding-top:18px}
   .stat-num{font-size:32px}
   .stat-lbl{font-size:9px}
   .hero-plane-wrap{display:none}
 
   /* CAUSA */
-  #causa{padding:70px 5vw 80px}
-  .causa-vis{height:240px}
-  .ccard{padding:20px}
+  #causa{padding:64px 5vw 72px;clip-path:polygon(0 2%,100% 0,100% 98%,0 100%)}
+  .causa-vis{height:230px}
+  .ccard{padding:18px 16px}
   .ccard-num{font-size:44px}
   .ccard-s .ccard-num{font-size:34px}
+  .ccard-s{bottom:0;left:14px;right:0}
   .causa-text p{font-size:14px}
 
   /* OBJETIVOS */
-  #objetivos{padding:70px 5vw}
-  .obj-grid{grid-template-columns:1fr;gap:12px}
+  #objetivos{padding:64px 5vw;clip-path:polygon(0 0,100% 2%,100% 100%,0 98%)}
+  .obj-grid{grid-template-columns:1fr;gap:12px;margin-top:28px}
+  .obj-card{padding:22px 18px}
 
   /* MAPA */
-  #mapa{padding:70px 5vw}
-  .route-cards{grid-template-columns:1fr 1fr;gap:10px}
+  #mapa{padding:64px 5vw}
+  .dest-pin{display:none}
+  .world-svg{opacity:.35}
+  .route-cards{grid-template-columns:1fr 1fr;gap:10px;margin-top:24px}
   .route-code{font-size:24px}
+  .route-card{padding:13px 10px}
   .route-dest{font-size:11px}
 
   /* PROGRAMAS */
-  #programas{padding:70px 5vw}
+  #programas{padding:64px 5vw}
+  .prog-grid{gap:12px}
   .prog-card{padding:20px 16px}
   .prog-card h3{font-size:22px}
   .prog-card p{font-size:12px}
+  .prog-bg{font-size:80px}
 
   /* RECURSOS */
-  #recursos{padding:70px 5vw}
-  .res-cards{grid-template-columns:1fr}
-  .preview-wrap{border-radius:8px}
-  #driveFrame{height:260px}
-  .frame-ph{height:260px}
+  #recursos{padding:64px 5vw;clip-path:polygon(0 3%,100% 0,100% 97%,0 100%)}
+  .res-cards{grid-template-columns:1fr 1fr;gap:10px;margin:28px auto 20px}
+  .res-card{padding:16px 13px}
+  .res-card h4{font-size:12px}
+  .res-card p{font-size:11px}
+  #driveFrame{height:280px}
+  .frame-ph{height:280px}
+  .drive-btn{padding:13px 24px;font-size:11px}
 
   /* FOOTER */
-  footer{padding:40px 5vw 28px}
-  .ft-logo{font-size:38px}
+  footer{padding:36px 5vw 24px}
+  .ft-logo{font-size:34px}
+  .ft-tag{font-size:14px}
 
   /* MODAL */
-  .modal-ov{padding:12px}
-  .modal{padding:24px 16px;border-radius:12px}
+  .modal-ov{padding:10px}
+  .modal{padding:26px 16px;border-radius:12px}
   .modal h2{font-size:26px}
   .modal p{font-size:13px}
 
   /* ADMIN */
-  .admin-inner{padding:30px 14px}
+  .admin-inner{padding:32px 14px}
   .admin-bar h2{font-size:30px}
   .drow{flex-direction:column}
-  .verify-btn{padding:12px;width:100%}
-  .res-item{flex-direction:column;align-items:flex-start;gap:10px}
+  .verify-btn{padding:12px;text-align:center}
+  .res-item{flex-direction:column;align-items:flex-start}
   .res-btns{width:100%;justify-content:flex-end}
+  .login-box{padding:32px 20px}
 }
 
-/* ── EXTRA SMALL (≤380px) ── */
-@media(max-width:380px){
-  .bs-fi{grid-template-columns:1fr 1fr}
-  .bs-fi-value{font-size:11px}
-  .bs-fi-label{font-size:8px}
-  .route-cards{grid-template-columns:1fr}
-  .hero-stats{flex-wrap:wrap;gap:14px}
+/* ═══ EXTRA SMALL (≤400px) ═══ */
+@media(max-width:400px){
+  .bs-title{font-size:clamp(46px,15vw,68px)}
+  .bs-fi{gap:6px 10px}
+  .bs-fi-value{font-size:12px}
+  .bs-fi-label{font-size:7.5px}
+  .bs-bottom{gap:6px}
+  .bs-enter{padding:9px 14px;font-size:9px}
+  .hero-title{font-size:clamp(44px,13vw,70px)}
+  .route-cards{grid-template-columns:1fr 1fr}
+  .res-cards{grid-template-columns:1fr}
+  .hero-stats{gap:12px}
   .stat-num{font-size:28px}
+  .obj-grid{grid-template-columns:1fr}
 }
 </style>
 </head>
 <body>
 
-<!-- BOARDING SCREEN -->
+<!-- BOARDING -->
 <div id="boarding">
   <div class="bs-scan"></div>
   <div class="bs-glow"></div>
@@ -436,42 +409,18 @@ footer{padding:54px 6vw 34px;background:#040d18;text-align:center;border-top:1px
       <div class="bs-time" id="bsTime">--:--:--</div>
     </div>
     <div class="bs-body">
-        <div class="bs-welcome-line">Bienvenido a bordo / Welcome aboard</div>
-        <div class="bs-welcome">WELCOME TO</div>
-        <div class="bs-title">MINUME<br><span class="hl">XVII</span></div>
-        <div class="bs-div"></div>
-        <div class="bs-fi">
-          <div class="bs-fi-item"><div class="bs-fi-label">Vuelo / Flight</div><div class="bs-fi-value">MNM-017</div></div>
-          <div class="bs-fi-item"><div class="bs-fi-label">Destino / Dest.</div><div class="bs-fi-value">FRONTERAS</div></div>
-          <div class="bs-fi-item"><div class="bs-fi-label">Estado / Status</div><div class="bs-fi-value g" id="bsStatus">CARGANDO...</div></div>
-          <div class="bs-fi-item"><div class="bs-fi-label">Tripulantes</div><div class="bs-fi-value">60+ VOL.</div></div>
-          <div class="bs-fi-item"><div class="bs-fi-label">SGA</div><div class="bs-fi-value">SAMUEL J.</div></div>
-          <div class="bs-fi-item"><div class="bs-fi-label">Edicion</div><div class="bs-fi-value">XVII &middot; 2026</div></div>
-        </div>
-      <div class="bs-plane-wrap">
-        <svg viewBox="0 0 260 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <ellipse cx="130" cy="110" rx="108" ry="27" fill="#d8eef6" opacity=".9"/>
-          <path d="M238 110 Q268 110 258 118 Q248 126 228 122 L238 110Z" fill="#b0d8ea"/>
-          <path d="M32 110 L22 72 L52 100 Z" fill="#5bbfde"/>
-          <path d="M62 110 L72 79 L86 108 Z" fill="#3a9dc5"/>
-          <path d="M102 108 L132 62 L200 100 L160 108 Z" fill="#5bbfde" opacity=".85"/>
-          <path d="M102 112 L132 160 L180 115 L160 112 Z" fill="#3a9dc5" opacity=".7"/>
-          <rect x="122" y="104" width="8" height="6" rx="2" fill="#0d1f35" opacity=".6"/>
-          <rect x="137" y="104" width="8" height="6" rx="2" fill="#0d1f35" opacity=".6"/>
-          <rect x="152" y="104" width="8" height="6" rx="2" fill="#0d1f35" opacity=".6"/>
-          <rect x="167" y="104" width="8" height="6" rx="2" fill="#0d1f35" opacity=".6"/>
-          <rect x="182" y="104" width="8" height="6" rx="2" fill="#0d1f35" opacity=".6"/>
-          <ellipse cx="148" cy="101" rx="13" ry="7" fill="#4a8aba"/>
-          <ellipse cx="151" cy="101" rx="9" ry="5" fill="#2a5c8c"/>
-          <!-- Crew silhouettes -->
-          <circle cx="205" cy="101" r="5" fill="#1a3a5c"/>
-          <rect x="202" y="105" width="6" height="5" rx="1" fill="#1a3a5c"/>
-          <circle cx="218" cy="100" r="4.5" fill="#1a3a5c"/>
-          <rect x="215" y="104" width="6" height="4" rx="1" fill="#1a3a5c"/>
-          <circle cx="230" cy="101" r="4" fill="rgba(91,191,222,.35)"/>
-          <rect x="228" y="104" width="4" height="4" rx="1" fill="rgba(91,191,222,.3)"/>
-          <ellipse cx="130" cy="145" rx="88" ry="11" fill="rgba(91,191,222,.09)" filter="blur(3px)"/>
-        </svg>
+      <div class="bs-welcome-line">Bienvenido a bordo / Welcome aboard</div>
+      <div class="bs-welcome">WELCOME TO</div>
+      <div class="bs-title">MINUME<br><span class="hl">XVII</span></div>
+      <div class="bs-div"></div>
+      <div class="bs-fi">
+        <div class="bs-fi-item"><div class="bs-fi-label">Vuelo / Flight</div><div class="bs-fi-value">MNM-017</div></div>
+        <div class="bs-fi-item"><div class="bs-fi-label">Destino / Dest.</div><div class="bs-fi-value">FRONTERAS</div></div>
+        <div class="bs-fi-item"><div class="bs-fi-label">Estado / Status</div><div class="bs-fi-value g" id="bsStatus">CARGANDO...</div></div>
+        <div class="bs-fi-item"><div class="bs-fi-label">Voluntarios</div><div class="bs-fi-value">700+ VOL.</div></div>
+        <div class="bs-fi-item"><div class="bs-fi-label">SGA</div><div class="bs-fi-value">SAMUEL J.</div></div>
+        <div class="bs-fi-item"><div class="bs-fi-label">Periodo</div><div class="bs-fi-value">XVII &middot; 2026</div></div>
+      </div>
     </div>
     <div class="bs-bottom">
       <div class="bs-board-txt">Estado: <span id="bsBoard">Preparando abordaje</span></div>
@@ -483,13 +432,12 @@ footer{padding:54px 6vw 34px;background:#040d18;text-align:center;border-top:1px
     <div class="bs-ticker-inner">
       <span>MINUME XVII &middot; TRASCIENDE FRONTERAS</span>
       <span>SGA SAMUEL JIMENEZ &middot; SECRETARIO GENERAL ACADEMICO</span>
-      <span>VUELO MNM-017 &middot; 60+ VOLUNTARIOS A BORDO</span>
+      <span>VUELO MNM-017 &middot; 700+ VOLUNTARIOS A BORDO</span>
       <span>DESTINO: EXCELENCIA ACADEMICA</span>
       <span>ACADEMIA FARO &middot; DELEGAME &middot; MINUME CONTIGO &middot; BANCO ACADEMICO</span>
       <span>MINUME XVII &middot; TRASCIENDE FRONTERAS</span>
       <span>SGA SAMUEL JIMENEZ &middot; SECRETARIO GENERAL ACADEMICO</span>
-      <span>VUELO MNM-017 &middot; 60+ VOLUNTARIOS A BORDO</span>
-      <span>DESTINO: EXCELENCIA ACADEMICA</span>
+      <span>VUELO MNM-017 &middot; 700+ VOLUNTARIOS A BORDO</span>
     </div>
   </div>
 </div>
@@ -518,7 +466,7 @@ footer{padding:54px 6vw 34px;background:#040d18;text-align:center;border-top:1px
   <a href="#mapa" onclick="toggleMenu()">Destinos</a>
   <a href="#programas" onclick="toggleMenu()">Programas</a>
   <a href="#recursos" onclick="toggleMenu()">Recursos</a>
-  <a href="#" onclick="toggleMenu();setTimeout(()=>{authed?showPanel():showLogin()},200)" style="font-family:'Bebas Neue',sans-serif;font-size:32px;letter-spacing:3px;color:var(--sky);margin-top:10px;border-top:1px solid rgba(91,191,222,0.2);padding-top:20px">Admin</a>
+  <a href="#" onclick="toggleMenu();setTimeout(()=>{authed?showPanel():showLogin()},200)" style="color:var(--sky);border-top:1px solid rgba(91,191,222,.2);padding-top:18px;margin-top:4px">Admin</a>
 </div>
 
 <!-- HERO -->
@@ -527,7 +475,7 @@ footer{padding:54px 6vw 34px;background:#040d18;text-align:center;border-top:1px
   <div class="hero-orb orb1"></div>
   <div class="hero-orb orb2"></div>
   <div class="hero-plane-wrap">
-    <svg viewBox="0 0 900 500" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:100%;opacity:.22;filter:blur(.5px)">
+    <svg viewBox="0 0 900 500" fill="none" style="width:100%;opacity:.22;filter:blur(.5px)">
       <ellipse cx="450" cy="260" rx="378" ry="88" fill="white" opacity=".85"/>
       <path d="M828 260 Q888 260 868 280 Q848 300 808 295 L828 260Z" fill="#ccc"/>
       <path d="M82 260 L62 192 L112 246 Z" fill="#aaa"/>
@@ -542,15 +490,10 @@ footer{padding:54px 6vw 34px;background:#040d18;text-align:center;border-top:1px
       <rect x="577" y="248" width="20" height="13" rx="4" fill="rgba(13,31,53,.5)"/>
       <rect x="612" y="248" width="20" height="13" rx="4" fill="rgba(13,31,53,.5)"/>
       <rect x="647" y="248" width="20" height="13" rx="4" fill="rgba(13,31,53,.5)"/>
-      <rect x="682" y="248" width="20" height="13" rx="4" fill="rgba(13,31,53,.5)"/>
-      <rect x="717" y="248" width="20" height="13" rx="4" fill="rgba(13,31,53,.5)"/>
-      <!-- Crew silhouettes on hero plane -->
       <circle cx="778" cy="247" r="13" fill="rgba(26,58,92,.8)"/>
-      <rect cx="778" y="259" width="14" height="11" rx="2" fill="rgba(26,58,92,.8)"/>
       <circle cx="806" cy="247" r="12" fill="rgba(26,58,92,.72)"/>
       <circle cx="748" cy="247" r="11" fill="rgba(91,191,222,.28)"/>
       <circle cx="832" cy="249" r="10" fill="rgba(26,58,92,.6)"/>
-      <ellipse cx="450" cy="378" rx="340" ry="28" fill="rgba(91,191,222,.06)"/>
     </svg>
   </div>
   <div class="hero-content">
@@ -560,13 +503,13 @@ footer{padding:54px 6vw 34px;background:#040d18;text-align:center;border-top:1px
       <span class="solid">XVII</span>
       <span class="outline">Trasciende</span>
     </h1>
-    <p class="hero-sub">Fronteras que no nos limitan, horizontes que nos definen.</p>
+    <p class="hero-sub">Las fronteras no siempre son geograficas.</p>
     <div class="hero-ctas">
       <a href="#programas" class="btn-p">Explorar Programas</a>
       <a href="#causa" class="btn-o">Nuestra Mision</a>
     </div>
     <div class="hero-stats">
-      <div><div class="stat-num">60+</div><div class="stat-lbl">Voluntarios</div></div>
+      <div><div class="stat-num">700+</div><div class="stat-lbl">Voluntarios</div></div>
       <div><div class="stat-num">8</div><div class="stat-lbl">Programas</div></div>
       <div><div class="stat-num">XVII</div><div class="stat-lbl">Edicion</div></div>
       <div><div class="stat-num">&#8734;</div><div class="stat-lbl">Fronteras</div></div>
@@ -588,12 +531,12 @@ footer{padding:54px 6vw 34px;background:#040d18;text-align:center;border-top:1px
     </div>
     <div class="causa-vis">
       <div class="ccard ccard-m">
-        <div class="ccard-num">60+</div>
-        <div class="ccard-txt">Voluntarios conectados en el Primer Encuentro Virtual de MINUME, aportando ideas, propuestas y vision de futuro para la Republica Dominicana.</div>
+        <div class="ccard-num">700+</div>
+        <div class="ccard-txt">Voluntarios conectados aportando ideas, propuestas y vision de futuro para la Republica Dominicana.</div>
       </div>
       <div class="ccard ccard-s">
         <div class="ccard-num">XVII</div>
-        <div class="ccard-txt">Ediciones construyendo lideres que trascienden fronteras y transforman su entorno.</div>
+        <div class="ccard-txt">Periodos de sesiones construyendo lideres que trascienden fronteras y transforman su entorno.</div>
       </div>
     </div>
   </div>
@@ -606,38 +549,22 @@ footer{padding:54px 6vw 34px;background:#040d18;text-align:center;border-top:1px
     <h2 class="sec-title">OBJETIVOS</h2>
   </div>
   <div class="obj-grid">
-    <div class="obj-card reveal">
-      <div class="obj-num">01</div>
-      <h3>Excelencia Academica</h3>
-      <p>Conducir a los estudiantes hacia un destino de excelencia donde sean capaces de crear sus propias oportunidades y trascender sus propios limites.</p>
-    </div>
-    <div class="obj-card reveal">
-      <div class="obj-num">02</div>
-      <h3>Liderazgo Integro</h3>
-      <p>Formar lideres que destaquen en politica, economia, ciencia, tecnologia y comunicacion, con vision global y valores solidos.</p>
-    </div>
-    <div class="obj-card reveal">
-      <div class="obj-num">03</div>
-      <h3>Competencias Educativas</h3>
-      <p>Promover el maximo desarrollo de las competencias educativas en cada delegado, preparandolos para los desafios del siglo XXI.</p>
-    </div>
-    <div class="obj-card reveal">
-      <div class="obj-num">04</div>
-      <h3>Desarrollo Profesional</h3>
-      <p>Sentar las bases solidas para el desarrollo profesional y laboral de cada participante, con herramientas reales y aplicables.</p>
-    </div>
+    <div class="obj-card reveal"><div class="obj-num">01</div><h3>Excelencia Academica</h3><p>Conducir a los estudiantes hacia un destino de excelencia donde sean capaces de crear sus propias oportunidades y trascender sus propios limites.</p></div>
+    <div class="obj-card reveal"><div class="obj-num">02</div><h3>Liderazgo Integro</h3><p>Formar lideres que destaquen en politica, economia, ciencia, tecnologia y comunicacion, con vision global y valores solidos.</p></div>
+    <div class="obj-card reveal"><div class="obj-num">03</div><h3>Competencias Educativas</h3><p>Promover el maximo desarrollo de las competencias educativas en cada delegado, preparandolos para los desafios del siglo XXI.</p></div>
+    <div class="obj-card reveal"><div class="obj-num">04</div><h3>Desarrollo Profesional</h3><p>Sentar las bases solidas para el desarrollo profesional y laboral de cada participante, con herramientas reales y aplicables.</p></div>
   </div>
 </section>
 
-<!-- DESTINOS MAP -->
+<!-- MAPA -->
 <section id="mapa">
-  <div class="reveal" style="text-align:center;margin-bottom:50px">
+  <div class="reveal" style="text-align:center;margin-bottom:46px">
     <div class="sec-label">Rutas Academicas</div>
     <h2 class="sec-title">DESTINOS DE CONOCIMIENTO</h2>
     <p class="sec-intro">Cada programa es un destino. Cada delegado, un viajero rumbo a la excelencia.</p>
   </div>
   <div class="map-wrap reveal">
-    <svg class="world-svg" viewBox="0 0 900 440" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg class="world-svg" viewBox="0 0 900 440" fill="none">
       <path d="M62 82 L182 62 L222 102 L202 162 L172 202 L132 222 L102 212 L72 172 L52 132 Z" fill="rgba(91,191,222,.12)" stroke="rgba(91,191,222,.3)" stroke-width="1"/>
       <path d="M132 242 L182 232 L202 282 L192 362 L162 402 L132 392 L112 342 L112 282 Z" fill="rgba(91,191,222,.1)" stroke="rgba(91,191,222,.25)" stroke-width="1"/>
       <path d="M362 62 L432 52 L452 92 L422 122 L382 132 L352 112 L342 87 Z" fill="rgba(91,191,222,.14)" stroke="rgba(91,191,222,.3)" stroke-width="1"/>
@@ -653,33 +580,14 @@ footer{padding:54px 6vw 34px;background:#040d18;text-align:center;border-top:1px
       <path d="M200 200 Q182 262 152 322" class="fp" style="animation-delay:-1.5s"/>
       <text x="288" y="150" font-size="10" fill="rgba(91,191,222,.6)">&#9992;</text>
       <text x="362" y="147" font-size="9" fill="rgba(91,191,222,.5)">&#9992;</text>
-      <text x="412" y="184" font-size="8" fill="rgba(91,191,222,.4)">&#9992;</text>
     </svg>
     <div class="dest-pins">
-      <div class="dest-pin" style="left:22%;top:44%">
-        <div class="pin-bubble"><div class="pin-name">SANTO DOMINGO</div><div class="pin-prog">Base de Operaciones</div></div>
-        <div class="pin-tail"></div><div class="pin-dot"></div>
-      </div>
-      <div class="dest-pin" style="left:44%;top:28%">
-        <div class="pin-bubble"><div class="pin-name">ACADEMIA FARO</div><div class="pin-prog">Formacion Integral</div></div>
-        <div class="pin-tail"></div><div class="pin-dot"></div>
-      </div>
-      <div class="dest-pin" style="left:62%;top:22%">
-        <div class="pin-bubble"><div class="pin-name">DELEGAME</div><div class="pin-prog">Plataforma Digital</div></div>
-        <div class="pin-tail"></div><div class="pin-dot"></div>
-      </div>
-      <div class="dest-pin" style="left:76%;top:36%">
-        <div class="pin-bubble"><div class="pin-name">BANCO ACADEMICO</div><div class="pin-prog">Repositorio Nacional</div></div>
-        <div class="pin-tail"></div><div class="pin-dot"></div>
-      </div>
-      <div class="dest-pin" style="left:17%;top:72%">
-        <div class="pin-bubble"><div class="pin-name">MINUME CONTIGO</div><div class="pin-prog">Mentoria</div></div>
-        <div class="pin-tail"></div><div class="pin-dot"></div>
-      </div>
-      <div class="dest-pin" style="left:52%;top:60%">
-        <div class="pin-bubble"><div class="pin-name">ELECTIVAS</div><div class="pin-prog">Libertad Curricular</div></div>
-        <div class="pin-tail"></div><div class="pin-dot"></div>
-      </div>
+      <div class="dest-pin" style="left:22%;top:44%"><div class="pin-bubble"><div class="pin-name">SANTO DOMINGO</div><div class="pin-prog">Base de Operaciones</div></div><div class="pin-tail"></div><div class="pin-dot"></div></div>
+      <div class="dest-pin" style="left:44%;top:28%"><div class="pin-bubble"><div class="pin-name">ACADEMIA FARO</div><div class="pin-prog">Formacion Integral</div></div><div class="pin-tail"></div><div class="pin-dot"></div></div>
+      <div class="dest-pin" style="left:62%;top:22%"><div class="pin-bubble"><div class="pin-name">DELEGAME</div><div class="pin-prog">Plataforma Digital</div></div><div class="pin-tail"></div><div class="pin-dot"></div></div>
+      <div class="dest-pin" style="left:76%;top:36%"><div class="pin-bubble"><div class="pin-name">BANCO ACADEMICO</div><div class="pin-prog">Repositorio Nacional</div></div><div class="pin-tail"></div><div class="pin-dot"></div></div>
+      <div class="dest-pin" style="left:17%;top:72%"><div class="pin-bubble"><div class="pin-name">MINUME CONTIGO</div><div class="pin-prog">Mentoria</div></div><div class="pin-tail"></div><div class="pin-dot"></div></div>
+      <div class="dest-pin" style="left:52%;top:60%"><div class="pin-bubble"><div class="pin-name">ELECTIVAS</div><div class="pin-prog">Libertad Curricular</div></div><div class="pin-tail"></div><div class="pin-dot"></div></div>
     </div>
   </div>
   <div class="route-cards reveal">
@@ -694,52 +602,20 @@ footer{padding:54px 6vw 34px;background:#040d18;text-align:center;border-top:1px
 
 <!-- PROGRAMAS -->
 <section id="programas">
-  <div class="reveal" style="text-align:center;margin-bottom:56px">
+  <div class="reveal" style="text-align:center;margin-bottom:52px">
     <div class="sec-label">Iniciativas en Vuelo</div>
     <h2 class="sec-title">QUE HAREMOS</h2>
     <p class="sec-intro">Ocho programas disenados para elevar, conectar y transformar la experiencia academica de cada participante.</p>
   </div>
   <div class="prog-grid">
-    <div class="prog-card wide reveal" onclick="openModal('accion')">
-      <div class="prog-line ls"></div>
-      <div><div class="prog-tag">Proyecto Regional</div><h3>Accion que Trasciende</h3><p>Iniciativa articulada al programa Ciudadanos al 100, orientada a consolidar la formacion civica, etica y social de los estudiantes mediante acciones reales, visibles y medibles de impacto comunitario...</p></div>
-      <button class="prog-rm">Leer mas en el manual</button><div class="prog-bg">01</div>
-    </div>
-    <div class="prog-card narrow reveal" onclick="openModal('faro')">
-      <div class="prog-line lt"></div>
-      <div><div class="prog-tag">Programa Academico</div><h3>Academia FARO MINUME</h3><p>Plan de formacion integral articulado en cuatro ejes: Formacion, Analisis, Resultado y Orientacion. Desde pruebas de nivelacion hasta diseno curricular adaptado...</p></div>
-      <button class="prog-rm">Leer mas en el manual</button><div class="prog-bg">02</div>
-    </div>
-    <div class="prog-card narrow reveal" onclick="openModal('contigo')">
-      <div class="prog-line ln"></div>
-      <div><div class="prog-tag">Mentoria</div><h3>MINUME Contigo</h3><p>Programa estructurado de consultas y mentorias academicas disenado para acompanar a los delegados desde los Modelos Regionales hasta el Modelo Internacional...</p></div>
-      <button class="prog-rm">Leer mas en el manual</button><div class="prog-bg">03</div>
-    </div>
-    <div class="prog-card wide reveal" onclick="openModal('delegame')">
-      <div class="prog-line lg"></div>
-      <div><div class="prog-tag">Plataforma Digital</div><h3>DeleGame</h3><p>Plataforma digital disenada para que los estudiantes aprendan de manera divertida, creativa e innovadora. Transformamos la formacion academica en una experiencia interactiva donde el conocimiento se adquiere jugando...</p></div>
-      <button class="prog-rm">Leer mas en el manual</button><div class="prog-bg">04</div>
-    </div>
-    <div class="prog-card third reveal" onclick="openModal('portavoz')">
-      <div class="prog-line ls"></div>
-      <div><div class="prog-tag">Comunicacion</div><h3>Portavoz CLIT</h3><p>Convertir al equipo CLIT en los portavoces oficiales previos a MINUME, creando contenido educativo y motivacional con alcance regional...</p></div>
-      <button class="prog-rm">Leer mas en el manual</button><div class="prog-bg">05</div>
-    </div>
-    <div class="prog-card third reveal" onclick="openModal('pasante')">
-      <div class="prog-line lt"></div>
-      <div><div class="prog-tag">Formacion</div><h3>Pasante MINUME</h3><p>Iniciativa formativa para voluntarios regionales egresados del MINUME, brindando experiencia practica en las areas academica y organizativa...</p></div>
-      <button class="prog-rm">Leer mas en el manual</button><div class="prog-bg">06</div>
-    </div>
-    <div class="prog-card third reveal" onclick="openModal('banco')">
-      <div class="prog-line lg"></div>
-      <div><div class="prog-tag">Repositorio</div><h3>Banco Academico Nacional</h3><p>Recopilacion de los mejores discursos, documentos de posicion, guias de preparacion y proyectos de resolucion sobresalientes...</p></div>
-      <button class="prog-rm">Leer mas en el manual</button><div class="prog-bg">07</div>
-    </div>
-    <div class="prog-card narrow reveal" onclick="openModal('electivas')">
-      <div class="prog-line ln"></div>
-      <div><div class="prog-tag">Libertad Curricular</div><h3>Electivas MINUME</h3><p>Modelo de libertad curricular a traves de capacitaciones formativas opcionales, otorgando al estudiante autonomia para personalizar su aprendizaje en funcion de sus aspiraciones...</p></div>
-      <button class="prog-rm">Leer mas en el manual</button><div class="prog-bg">08</div>
-    </div>
+    <div class="prog-card wide reveal" onclick="openModal('accion')"><div class="prog-line ls"></div><div><div class="prog-tag">Proyecto Regional</div><h3>Accion que Trasciende</h3><p>Iniciativa articulada al programa Ciudadanos al 100, orientada a consolidar la formacion civica, etica y social de los estudiantes mediante acciones reales, visibles y medibles de impacto comunitario...</p></div><button class="prog-rm">Leer mas en el manual</button><div class="prog-bg">01</div></div>
+    <div class="prog-card narrow reveal" onclick="openModal('faro')"><div class="prog-line lt"></div><div><div class="prog-tag">Programa Academico</div><h3>Academia FARO MINUME</h3><p>Plan de formacion integral articulado en cuatro ejes: Formacion, Analisis, Resultado y Orientacion. Desde pruebas de nivelacion hasta diseno curricular adaptado...</p></div><button class="prog-rm">Leer mas en el manual</button><div class="prog-bg">02</div></div>
+    <div class="prog-card narrow reveal" onclick="openModal('contigo')"><div class="prog-line ln"></div><div><div class="prog-tag">Mentoria</div><h3>MINUME Contigo</h3><p>Programa estructurado de consultas y mentorias academicas disenado para acompanar a los delegados desde los Modelos Regionales hasta el Modelo Internacional...</p></div><button class="prog-rm">Leer mas en el manual</button><div class="prog-bg">03</div></div>
+    <div class="prog-card wide reveal" onclick="openModal('delegame')"><div class="prog-line lg"></div><div><div class="prog-tag">Plataforma Digital</div><h3>DeleGame</h3><p>Plataforma digital disenada para que los estudiantes aprendan de manera divertida, creativa e innovadora. Transformamos la formacion academica en una experiencia interactiva donde el conocimiento se adquiere jugando...</p></div><button class="prog-rm">Leer mas en el manual</button><div class="prog-bg">04</div></div>
+    <div class="prog-card third reveal" onclick="openModal('portavoz')"><div class="prog-line ls"></div><div><div class="prog-tag">Comunicacion</div><h3>Portavoz CLIT</h3><p>Convertir al equipo CLIT en los portavoces oficiales previos a MINUME, creando contenido educativo y motivacional con alcance regional...</p></div><button class="prog-rm">Leer mas en el manual</button><div class="prog-bg">05</div></div>
+    <div class="prog-card third reveal" onclick="openModal('pasante')"><div class="prog-line lt"></div><div><div class="prog-tag">Formacion</div><h3>Pasante MINUME</h3><p>Iniciativa formativa para voluntarios regionales egresados del MINUME, brindando experiencia practica en las areas academica y organizativa...</p></div><button class="prog-rm">Leer mas en el manual</button><div class="prog-bg">06</div></div>
+    <div class="prog-card third reveal" onclick="openModal('banco')"><div class="prog-line lg"></div><div><div class="prog-tag">Repositorio</div><h3>Banco Academico Nacional</h3><p>Recopilacion de los mejores discursos, documentos de posicion, guias de preparacion y proyectos de resolucion sobresalientes...</p></div><button class="prog-rm">Leer mas en el manual</button><div class="prog-bg">07</div></div>
+    <div class="prog-card narrow reveal" onclick="openModal('electivas')"><div class="prog-line ln"></div><div><div class="prog-tag">Libertad Curricular</div><h3>Electivas MINUME</h3><p>Modelo de libertad curricular a traves de capacitaciones formativas opcionales, otorgando al estudiante autonomia para personalizar su aprendizaje...</p></div><button class="prog-rm">Leer mas en el manual</button><div class="prog-bg">08</div></div>
   </div>
 </section>
 
@@ -748,7 +624,7 @@ footer{padding:54px 6vw 34px;background:#040d18;text-align:center;border-top:1px
   <div class="reveal">
     <div class="sec-label">Materiales de Vuelo</div>
     <h2 class="sec-title">RECURSOS ACADEMICOS</h2>
-    <p class="sec-intro">Accede al manual completo y los materiales academicos de MINUME XVII. Todo el contenido esta disponible para consulta publica.</p>
+    <p class="sec-intro">Accede al manual completo y los materiales academicos de MINUME XVII disponibles para consulta publica.</p>
   </div>
   <div class="res-cards reveal">
     <div class="res-card" onclick="openDrive()"><h4>Manual Oficial MINUME XVII</h4><p>Documento completo con todos los programas, reglamentos y guias academicas.</p></div>
@@ -764,7 +640,7 @@ footer{padding:54px 6vw 34px;background:#040d18;text-align:center;border-top:1px
     <div class="frame-ph" id="framePh"><p>La previsualizacion del manual aparecera aqui una vez que el administrador configure el enlace de Google Drive.</p></div>
     <iframe id="driveFrame" allowfullscreen></iframe>
   </div>
-  <div class="reveal" style="margin-top:34px;text-align:center">
+  <div class="reveal" style="text-align:center;margin-top:28px">
     <button class="drive-btn" onclick="openDrive()">Abrir Manual Completo en Drive</button>
   </div>
 </section>
@@ -778,25 +654,25 @@ footer{padding:54px 6vw 34px;background:#040d18;text-align:center;border-top:1px
   <div class="ft-copy">2026 MINUME XVII &middot; Todos los derechos reservados</div>
 </footer>
 
-<!-- ADMIN LOGIN (hidden) -->
+<!-- ADMIN LOGIN -->
 <div id="adminLogin">
   <div class="login-box">
     <button class="login-x" onclick="closeLogin()">&#10005;</button>
     <div class="login-logo">MINUME</div>
     <div class="login-sub">Panel de Administracion</div>
-    <div class="login-field"><label>Usuario</label><input type="text" id="lUser" placeholder="Usuario" autocomplete="off"></div>
+    <div class="login-field"><label>Usuario</label><input type="text" id="lUser" placeholder="Usuario" autocomplete="off" autocorrect="off" autocapitalize="off"></div>
     <div class="login-field"><label>Contrasena</label><input type="password" id="lPass" placeholder="&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;" autocomplete="off" onkeydown="if(event.key==='Enter')doLogin()"></div>
     <button class="login-btn" onclick="doLogin()">Ingresar</button>
-    <div class="login-err" id="lErr">Credenciales incorrectas.</div>
+    <div class="login-err" id="lErr">Credenciales incorrectas. Intenta de nuevo.</div>
   </div>
 </div>
 
-<!-- ADMIN PANEL (hidden) -->
+<!-- ADMIN PANEL -->
 <div id="adminPanel">
   <div class="admin-inner">
     <div class="admin-bar">
       <div><h2>Gestion de Recursos</h2><p>Administra los materiales academicos del modelo.</p></div>
-      <div style="display:flex;gap:12px;align-items:center;flex-wrap:wrap">
+      <div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap">
         <div class="admin-badge">SGA &middot; Samuel</div>
         <button class="logout-btn" onclick="logoutAdmin()">Cerrar Sesion</button>
       </div>
@@ -849,9 +725,9 @@ footer{padding:54px 6vw 34px;background:#040d18;text-align:center;border-top:1px
   const clk=document.getElementById('bsTime'),st=document.getElementById('bsStatus'),bd=document.getElementById('bsBoard'),fill=document.getElementById('bsFill'),btn=document.getElementById('bsBtn');
   function tick(){const n=new Date();clk.textContent=n.toLocaleTimeString('es-DO',{hour:'2-digit',minute:'2-digit',second:'2-digit'})}
   tick();setInterval(tick,1000);
-  const steps=[{t:400,s:'PREPARANDO...',b:'Inicializando sistemas'},{t:1200,s:'EN TIERRA',b:'Cargando tripulacion'},{t:2200,s:'ABORDANDO',b:'60+ voluntarios a bordo'},{t:3400,s:'LISTO PARA DESPEGAR',b:'Preparando pista'},{t:4800,s:'DESPEGANDO',b:'Rumbo a la excelencia'},{t:6000,s:'EN VUELO',b:'Bienvenido a bordo'}];
+  const steps=[{t:500,s:'PREPARANDO...',b:'Inicializando sistemas'},{t:1400,s:'EN TIERRA',b:'Cargando tripulacion'},{t:2400,s:'ABORDANDO',b:'700+ voluntarios a bordo'},{t:3600,s:'LISTO PARA DESPEGAR',b:'Preparando pista'},{t:5000,s:'DESPEGANDO',b:'Rumbo a la excelencia'},{t:6200,s:'EN VUELO',b:'Bienvenido a bordo'}];
   steps.forEach(({t,s,b})=>setTimeout(()=>{st.textContent=s;bd.textContent=b},t));
-  let p=0;const pi=setInterval(()=>{p=Math.min(p+1,100);fill.style.width=p+'%';if(p>=100){clearInterval(pi);btn.classList.add('ready')}},60);
+  let p=0;const pi=setInterval(()=>{p=Math.min(p+1,100);fill.style.width=p+'%';if(p>=100){clearInterval(pi);btn.classList.add('ready')}},65);
 })();
 function enterSite(){document.getElementById('boarding').classList.add('exit');setTimeout(()=>document.getElementById('boarding').style.display='none',800)}
 
@@ -860,7 +736,7 @@ window.addEventListener('scroll',()=>document.getElementById('navbar').classList
 function toggleMenu(){document.getElementById('mobileMenu').classList.toggle('open')}
 
 // REVEAL
-const obs=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting)x.target.classList.add('visible')}),{threshold:.1});
+const obs=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting)x.target.classList.add('visible')}),{threshold:.08});
 document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
 
 // STATE
@@ -880,13 +756,13 @@ function loadFrame(){
 function openDrive(){if(mainLink)window.open(mainLink,'_blank')}
 loadFrame();
 
-// ADMIN ACCESS — secret key sequence (type "admin" anywhere) OR URL hash #admin-control
+// ADMIN ACCESS
 let buf='';
 document.addEventListener('keypress',e=>{buf+=e.key;if(buf.length>10)buf=buf.slice(-10);if(buf.endsWith('admin')){buf='';authed?showPanel():showLogin()}});
 window.addEventListener('hashchange',()=>{if(location.hash==='#admin-control'){history.replaceState(null,null,' ');authed?showPanel():showLogin()}});
 if(location.hash==='#admin-control'){history.replaceState(null,null,' ');showLogin()}
 
-function showLogin(){document.getElementById('adminLogin').classList.add('active');document.getElementById('lUser').focus();document.getElementById('lErr').style.display='none';document.getElementById('lUser').value='';document.getElementById('lPass').value=''}
+function showLogin(){document.getElementById('adminLogin').classList.add('active');setTimeout(()=>document.getElementById('lUser').focus(),200);document.getElementById('lErr').style.display='none';document.getElementById('lUser').value='';document.getElementById('lPass').value=''}
 function closeLogin(){document.getElementById('adminLogin').classList.remove('active')}
 function doLogin(){
   const u=document.getElementById('lUser').value.trim(),p=document.getElementById('lPass').value.trim();
@@ -929,7 +805,7 @@ const mdata={
 function openModal(k){const d=mdata[k];if(!d)return;document.getElementById('mTag').textContent=d.tag;document.getElementById('mTitle').textContent=d.title;document.getElementById('mBody').innerHTML=d.body;document.getElementById('mCta').href=mainLink||'#recursos';document.getElementById('modal').classList.add('active');document.body.style.overflow='hidden'}
 function closeModal(){document.getElementById('modal').classList.remove('active');document.body.style.overflow=''}
 function closeModalOut(e){if(e.target===document.getElementById('modal'))closeModal()}
-document.addEventListener('keydown',e=>{if(e.key==='Escape')closeModal()});
+document.addEventListener('keydown',e=>{if(e.key==='Escape'){closeModal();closeLogin()}});
 </script>
 </body>
 </html>
