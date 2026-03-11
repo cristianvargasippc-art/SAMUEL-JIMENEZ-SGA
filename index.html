@@ -180,14 +180,18 @@ section{position:relative}
 .res-card:hover{background:#fff;transform:translateY(-4px);box-shadow:0 18px 50px rgba(26,58,92,.2)}
 .res-card h4{font-size:14px;font-weight:700;color:var(--navy-deep);margin-bottom:5px}
 .res-card p{font-size:12px;color:rgba(26,58,92,.58);line-height:1.5;text-align:justify}
-.preview-wrap{max-width:920px;margin:0 auto 32px;border-radius:12px;overflow:hidden;border:2px solid rgba(255,255,255,.5);box-shadow:0 24px 60px rgba(13,31,53,.25)}
 .prev-bar{background:rgba(26,58,92,.85);padding:10px 16px;display:flex;align-items:center;gap:10px}
 .pdots{display:flex;gap:5px}.pdots span{width:11px;height:11px;border-radius:50%}
 .pd1{background:#ff5f57}.pd2{background:#febc2e}.pd3{background:#28c840}
 .purl{flex:1;background:rgba(255,255,255,.1);border-radius:5px;padding:5px 12px;font-size:10px;color:rgba(255,255,255,.5);font-family:monospace}
-#driveFrame{width:100%;height:440px;border:none;background:#f1f3f4;display:none}
-.frame-ph{width:100%;height:440px;background:linear-gradient(135deg,#1a3a5c,#0d2a42);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;color:rgba(255,255,255,.32)}
-.frame-ph p{font-size:13px;max-width:270px;text-align:center;line-height:1.6}
+
+
+/* ═══ MANUAL / DRIVE ═══ */
+.preview-wrap{max-width:960px;margin:0 auto 32px;border-radius:12px;overflow:hidden;border:2px solid rgba(255,255,255,.5);box-shadow:0 24px 60px rgba(13,31,53,.25)}
+#driveFrame{width:100%;height:520px;border:none;background:#f1f3f4;display:none}
+.frame-ph{width:100%;height:520px;background:linear-gradient(135deg,#1a3a5c,#0d2a42);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;color:rgba(255,255,255,.32)}
+.frame-ph-icon{font-size:52px}
+.frame-ph p{font-size:13px;max-width:300px;text-align:center;line-height:1.6}
 .drive-btn{display:inline-flex;align-items:center;gap:10px;padding:14px 34px;background:var(--navy-deep);color:#fff;font-weight:700;font-size:11px;letter-spacing:2.5px;text-transform:uppercase;border-radius:5px;text-decoration:none;border:none;cursor:pointer;transition:all .3s}
 .drive-btn:hover{background:var(--navy);transform:translateY(-2px);box-shadow:0 10px 36px rgba(13,31,53,.3)}
 
@@ -272,9 +276,6 @@ footer{padding:50px 6vw 32px;background:#040d18;text-align:center;border-top:1px
 .com-info p{font-size:11.5px;color:rgba(26,58,92,.6);line-height:1.55;text-align:justify}
 
 
-/* ═══ DASHBOARD ═══ */
-.dash-wrap{max-width:1100px;margin:0 auto;border-radius:12px;overflow:hidden;border:1px solid rgba(91,191,222,.2);box-shadow:0 24px 60px rgba(0,0,0,.4)}
-.dash-ph{width:100%;height:560px;background:linear-gradient(135deg,#0d1f35,#071528);display:flex;align-items:center;justify-content:center}
 
 /* ═══ REVEAL ═══ */
 .reveal{opacity:0;transform:translateY(32px);transition:opacity .7s ease,transform .7s ease}
@@ -370,13 +371,11 @@ footer{padding:50px 6vw 32px;background:#040d18;text-align:center;border-top:1px
   .res-card{padding:16px 13px}
   .res-card h4{font-size:12px}
   .res-card p{font-size:11px}
-  #driveFrame{height:280px}
-  .frame-ph{height:280px}
-  .drive-btn{padding:13px 24px;font-size:11px}
 
-  /* DASHBOARD */
-  .dash-ph{height:360px}
-  #dashFrame{height:360px !important}
+
+  /* MANUAL */
+  #driveFrame{height:340px}
+  .frame-ph{height:340px}
 
   /* FOOTER */
   footer{padding:36px 5vw 24px}
@@ -633,7 +632,7 @@ footer{padding:50px 6vw 32px;background:#040d18;text-align:center;border-top:1px
   </div>
   <div class="obj-grid">
     <div class="obj-card reveal"><div class="obj-num">01</div><h3>Excelencia Académica</h3><p>Conducir a los estudiantes hacia un destino de excelencia donde sean capaces de crear sus propias oportunidades y trascender sus propios límites.</p></div>
-    <div class="obj-card reveal"><div class="obj-num">02</div><h3>Liderazgo Integro</h3><p>Formar líderes que destaquen en política, economía, ciencia, tecnología y comunicación, con visión global y valores sólidos.</p></div>
+    <div class="obj-card reveal"><div class="obj-num">02</div><h3>Liderazgo Íntegro</h3><p>Formar líderes que destaquen en política, economía, ciencia, tecnología y comunicación, con visión global y valores sólidos.</p></div>
     <div class="obj-card reveal"><div class="obj-num">03</div><h3>Competencias Educativas</h3><p>Promover el máximo desarrollo de las competencias educativas en cada delegado, preparándolos para los desafíos del siglo XXI.</p></div>
     <div class="obj-card reveal"><div class="obj-num">04</div><h3>Desarrollo Profesional</h3><p>Sentar las bases sólidas para el desarrollo profesional y laboral de cada participante, con herramientas reales y aplicables.</p></div>
   </div>
@@ -723,16 +722,21 @@ footer{padding:50px 6vw 32px;background:#040d18;text-align:center;border-top:1px
     <div class="com-card"><div class="com-num">11</div><div class="com-info"><h4>Corte Interamericana de Derechos Humanos</h4><p>Delibera sobre casos de violaciones a derechos humanos en el continente americano y vías de reparación.</p></div></div>
     <div class="com-card"><div class="com-num">12</div><div class="com-info"><h4>Consejo de Seguridad</h4><p>Órgano principal de la ONU encargado de mantener la paz y seguridad internacionales ante conflictos y amenazas globales.</p></div></div>
   </div>
+
+
   <div class="preview-wrap reveal">
     <div class="prev-bar">
       <div class="pdots"><span class="pd1"></span><span class="pd2"></span><span class="pd3"></span></div>
-      <div class="purl">drive.google.com &middot; Manual MINUME XVII</div>
+      <div class="purl" id="driveUrlBar">drive.google.com &middot; Manual MINUME XVII</div>
     </div>
-    <div class="frame-ph" id="framePh"><p>La previsualización aparecerá aquí cuando el administrador publique el enlace principal.</p></div>
+    <div class="frame-ph" id="framePh">
+      <div class="frame-ph-icon">&#128196;</div>
+      <p>La previsualización del manual aparecerá aquí cuando el administrador publique el enlace desde el panel.</p>
+    </div>
     <iframe id="driveFrame" allowfullscreen></iframe>
   </div>
-  <div class="reveal" style="text-align:center;margin-top:28px">
-    <button class="drive-btn" onclick="openDrive()">Abrir Manual Completo en Drive</button>
+  <div class="reveal" style="text-align:center;margin-top:24px">
+    <button class="drive-btn" onclick="openDrive()">Abrir Manual Completo &nbsp;&#8599;</button>
   </div>
 </section>
 
@@ -741,20 +745,17 @@ footer{padding:50px 6vw 32px;background:#040d18;text-align:center;border-top:1px
   <div class="reveal" style="text-align:center;margin-bottom:44px">
     <div class="sec-label">Datos en Tiempo Real</div>
     <h2 class="sec-title">DASHBOARD</h2>
-    <p class="sec-intro">Visualiza los datos y métricas de MINUME XVII directamente desde nuestra plataforma analítica.</p>
+    <p class="sec-intro">Visualiza los datos y métricas de MINUME XVII directamente desde nuestra plataforma de Power BI.</p>
   </div>
-  <div class="dash-wrap reveal">
-    <div class="prev-bar" style="border-radius:12px 12px 0 0">
-      <div class="pdots"><span class="pd1"></span><span class="pd2"></span><span class="pd3"></span></div>
-      <div class="purl">app.powerbi.com &middot; MINUME XVII Dashboard</div>
+  <div class="reveal" style="text-align:center">
+    <div style="display:inline-flex;flex-direction:column;align-items:center;gap:20px;background:rgba(91,191,222,.06);border:1px solid rgba(91,191,222,.2);border-radius:16px;padding:48px 56px;max-width:500px;width:100%">
+      <div style="font-size:52px;color:var(--sky)">&#9783;</div>
+      <div style="font-family:'Bebas Neue',sans-serif;font-size:28px;letter-spacing:2px;color:var(--sky)">Evaluación MINUME XVII</div>
+      <p style="font-size:14px;color:rgba(255,255,255,.5);max-width:340px;line-height:1.65;text-align:center">El dashboard interactivo de Power BI se abre en una nueva ventana para una visualización óptima.</p>
+      <a href="https://app.powerbi.com/view?r=eyJrIjoiM2QyN2Q4ZDUtYTAyYS00OGRiLWI0MjgtN2M0ZTRiODg1ZTZkIiwidCI6ImU4NzgxZTY1LTMyMDgtNDM2ZS05NzM0LTI4MDdmZThhMWVmNSIsImMiOjJ9" target="_blank" class="btn-p" style="font-size:12px;letter-spacing:2px;margin-top:4px">
+        Abrir Dashboard &nbsp;&#8599;
+      </a>
     </div>
-    <div class="dash-ph" id="dashPh">
-      <div style="text-align:center;color:rgba(255,255,255,.3)">
-        <div style="font-size:48px;margin-bottom:14px">&#9783;</div>
-        <p style="font-size:13px;max-width:280px;text-align:center;line-height:1.6">El dashboard se mostrará automáticamente cuando el administrador publique el enlace principal desde el panel de administración.</p>
-      </div>
-    </div>
-    <iframe id="dashFrame" style="width:100%;height:560px;border:none;display:none;background:#fff" allowfullscreen></iframe>
   </div>
 </section>
 
@@ -813,15 +814,7 @@ footer{padding:50px 6vw 32px;background:#040d18;text-align:center;border-top:1px
         <select id="rMain"><option value="no">No</option><option value="yes">Sí — Usar como Manual Oficial</option></select>
         <span style="font-size:10px;color:rgba(255,255,255,.3);margin-top:4px">Este enlace se mostrará como previsualización y manual oficial.</span>
       </div>
-      <div class="fg" style="margin-top:4px;padding-top:20px;border-top:1px solid rgba(91,191,222,.1)">
-        <label>&#9783; Enlace Power BI — Dashboard</label>
-        <div class="drow">
-          <input type="url" id="biLink" placeholder="https://app.powerbi.com/view?r=...">
-          <button class="verify-btn" onclick="verifyBiLink()">Verificar</button>
-        </div>
-        <span style="font-size:10px;color:rgba(255,255,255,.3);margin-top:4px">Este enlace se mostrará en la sección Dashboard para todos los visitantes.</span>
-        <button class="sub-btn" onclick="saveBiLink()" style="margin-top:10px">Guardar Dashboard</button>
-      </div>
+
       <div class="fg"><label>Descripción (opciónal)</label><textarea id="rDesc" placeholder="Breve descripción..."></textarea></div>
       <button class="sub-btn" onclick="addResource()">Públicar Recurso</button>
     </div>
@@ -874,12 +867,23 @@ function loadFrame(link){
   if(!url)return;
   mainLink=url;
   let e=url;
-  if(url.includes('drive.google.com/file/d/')){const id=url.match(/\/d\/([^\/]+)/)?.[1];if(id)e='https://drive.google.com/file/d/'+id+'/preview'}
-  else if(url.includes('docs.google.com'))e=url.replace('/edit','/preview').replace('/view','/preview');
-  document.getElementById('framePh').style.display='none';
-  const f=document.getElementById('driveFrame');f.src=e;f.style.display='block';
+  if(url.includes('drive.google.com/file/d/')){
+    const id=url.match(/\/d\/([^/]+)/)?.[1];
+    if(id)e='https://drive.google.com/file/d/'+id+'/preview';
+  } else if(url.includes('docs.google.com')){
+    e=url.replace('/edit','/preview').replace('/view','/preview');
+  } else if(url.includes('drive.google.com/open')){
+    const oid=url.match(/id=([^&]+)/)?.[1];
+    if(oid)e='https://drive.google.com/file/d/'+oid+'/preview';
+  }
+  const ph=document.getElementById('framePh');
+  const fr=document.getElementById('driveFrame');
+  const bar=document.getElementById('driveUrlBar');
+  if(ph)ph.style.display='none';
+  if(fr){fr.src=e;fr.style.display='block';}
+  if(bar)bar.textContent='drive.google.com · Manual MINUME XVII';
 }
-function openDrive(){if(mainLink)window.open(mainLink,'_blank')}
+function openDrive(){if(mainLink)window.open(mainLink,'_blank');}
 
 // ADMIN ACCESS
 let buf='';
@@ -969,21 +973,7 @@ function loadDash(url){
   f.src=u;
   f.style.display='block';
 }
-function saveBiLink(){
-  const v=document.getElementById('biLink').value.trim();
-  if(!v||!v.startsWith('http')){alert('Enlace inválido.');return}
-  biUrl=v;
-  if(window._fbSet){
-    window._fbSet('mnm17/biUrl',v);
-  }
-  loadDash(v);
-  alert('¡Dashboard actualizado correctamente!');
-}
-function verifyBiLink(){
-  const l=document.getElementById('biLink').value.trim();
-  if(l.startsWith('http'))window.open(l,'_blank');
-  else alert('Enlace inválido.');
-}
+
 // Firebase handles pre-fill via onValue listener above
 
 // MODAL DATA
