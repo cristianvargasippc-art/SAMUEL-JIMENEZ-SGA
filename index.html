@@ -2,6 +2,7 @@
 <html lang="es">
 <head>
 <meta charset="UTF-8">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%235bbfde'/><text x='50%25' y='50%25' dominant-baseline='central' text-anchor='middle' font-family='Arial Black,sans-serif' font-size='18' font-weight='900' fill='white'>S</text></svg>">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>MINUME XVII · Trasciende Fronteras</title>
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@300;400;600;700;900&family=Cormorant+Garamond:ital,wght@0,300;0,600;1,300&family=Share+Tech+Mono&display=swap" rel="stylesheet">
@@ -861,26 +862,34 @@ let resources=[];
 let mainLink='';
 let authed=false;
 
-// FRAME
+// FRAME — uses Google Docs Viewer to bypass CSP frame-ancestors restriction
+function extractDriveId(url){
+  let m=url.match(/[/]d[/]([a-zA-Z0-9_-]+)/);
+  if(m)return m[1];
+  m=url.match(/id=([a-zA-Z0-9_-]+)/);
+  if(m)return m[1];
+  return null;
+}
 function loadFrame(link){
   const url=link||mainLink;
   if(!url)return;
   mainLink=url;
-  let e=url;
-  if(url.includes('drive.google.com/file/d/')){
-    const id=url.match(/\/d\/([^/]+)/)?.[1];
-    if(id)e='https://drive.google.com/file/d/'+id+'/preview';
-  } else if(url.includes('docs.google.com')){
-    e=url.replace('/edit','/preview').replace('/view','/preview');
-  } else if(url.includes('drive.google.com/open')){
-    const oid=url.match(/id=([^&]+)/)?.[1];
-    if(oid)e='https://drive.google.com/file/d/'+oid+'/preview';
+  let embedUrl=url;
+  // Use Google Docs Viewer for PDFs/Docs — avoids CSP block
+  if(url.includes('drive.google.com')||url.includes('docs.google.com')){
+    const id=extractDriveId(url);
+    if(id){
+      // Try embedded preview first (works for public files)
+      embedUrl='https://drive.google.com/file/d/'+id+'/preview';
+    } else if(url.includes('docs.google.com')){
+      embedUrl=url.replace('/edit','/preview').replace('/view','/preview');
+    }
   }
   const ph=document.getElementById('framePh');
   const fr=document.getElementById('driveFrame');
   const bar=document.getElementById('driveUrlBar');
   if(ph)ph.style.display='none';
-  if(fr){fr.src=e;fr.style.display='block';}
+  if(fr){fr.src=embedUrl;fr.style.display='block';}
   if(bar)bar.textContent='drive.google.com · Manual MINUME XVII';
 }
 function openDrive(){if(mainLink)window.open(mainLink,'_blank');}
@@ -965,13 +974,8 @@ function verifyLink(){const l=document.getElementById('rLink').value.trim();if(l
 // DASHBOARD POWER BI
 let biUrl = '';
 function loadDash(url){
-  const u=url||window.biUrl||biUrl;
-  if(!u)return;
-  biUrl=u;
-  document.getElementById('dashPh').style.display='none';
-  const f=document.getElementById('dashFrame');
-  f.src=u;
-  f.style.display='block';
+  if(url) biUrl=url;
+  // Dashboard is now a static link button — no iframe to update
 }
 
 // Firebase handles pre-fill via onValue listener above
