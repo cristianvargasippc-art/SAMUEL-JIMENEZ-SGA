@@ -79,7 +79,7 @@ nav.scrolled{padding:11px 40px;background:rgba(7,16,30,.97)}
 @keyframes planeDrift{0%,100%{transform:translateY(0) rotate(-6deg)}50%{transform:translateY(-22px) rotate(-4deg)}}
 .hero-content{position:relative;z-index:5;padding:0 6vw;max-width:1300px;margin:0 auto;width:100%;padding-top:100px}
 .hero-eyebrow{display:inline-flex;align-items:center;gap:10px;background:rgba(91,191,222,.1);border:1px solid rgba(91,191,222,.35);border-radius:100px;padding:6px 18px;font-size:10px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--sky);margin-bottom:24px;animation:fadeUp .8s ease both}
-.hero-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(56px,10vw,150px);line-height:.88;letter-spacing:-2px;animation:fadeUp .8s .15s ease both}
+.hero-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(40px,7.5vw,120px);line-height:.9;letter-spacing:-2px;animation:fadeUp .8s .15s ease both}
 .hero-title .outline{color:transparent;-webkit-text-stroke:clamp(1px,.3vw,2px) var(--sky);display:block}
 .hero-title .solid{color:var(--sky)}
 .hero-sub{font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:300;font-size:clamp(17px,2.5vw,28px);color:rgba(255,255,255,.65);margin-top:16px;max-width:560px;animation:fadeUp .8s .3s ease both}
@@ -109,14 +109,14 @@ section{position:relative}
 #causa .sec-label::before,#causa .sec-label::after{background:var(--sky-deep)}
 #causa .sec-title{color:var(--navy-deep)}
 .causa-grid{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center;max-width:1140px;margin:52px auto 0}
-.causa-text p{font-size:16px;line-height:1.85;color:#3a4a5c;margin-bottom:16px;font-weight:300}
+.causa-text p{font-size:16px;line-height:1.85;color:#3a4a5c;margin-bottom:16px;font-weight:300;text-align:justify}
 .causa-vis{position:relative;height:420px}
 .ccard{position:absolute;border-radius:14px;padding:26px;box-shadow:0 24px 60px rgba(13,31,53,.22)}
 .ccard-m{top:0;left:0;right:0;background:linear-gradient(135deg,var(--navy-deep),var(--navy));color:#fff}
 .ccard-s{bottom:0;left:30px;right:-10px;background:linear-gradient(135deg,var(--sky),var(--sky-deep));color:#fff;z-index:2}
 .ccard-num{font-family:'Bebas Neue',sans-serif;font-size:68px;line-height:1;color:var(--sky)}
-.ccard-s .ccard-num{color:rgba(255,255,255,.9);font-size:50px}
-.ccard-txt{font-size:13px;line-height:1.65;opacity:.72;margin-top:8px}
+.ccard-s .ccard-num{color:rgba(255,255,255,.9);font-size:clamp(28px,4vw,42px)}
+.ccard-txt{font-size:13px;line-height:1.65;opacity:.72;margin-top:8px;text-align:justify}
 
 /* ═══ OBJETIVOS ═══ */
 #objetivos{padding:120px 6vw;background:var(--navy-deep);clip-path:polygon(0 0,100% 4%,100% 100%,0 96%)}
@@ -127,7 +127,7 @@ section{position:relative}
 .obj-card:hover::before{right:0}
 .obj-num{font-family:'Bebas Neue',sans-serif;font-size:48px;color:rgba(91,191,222,.12);line-height:1;margin-bottom:8px}
 .obj-card h3{font-family:'Bebas Neue',sans-serif;font-size:20px;letter-spacing:1px;color:var(--sky);margin-bottom:10px}
-.obj-card p{font-size:13px;line-height:1.7;color:rgba(255,255,255,.58)}
+.obj-card p{font-size:13px;line-height:1.7;color:rgba(255,255,255,.58);text-align:justify}
 
 /* ═══ MAPA ═══ */
 #mapa{padding:110px 6vw;background:linear-gradient(180deg,#07192e 0%,#0d2a42 100%);overflow:hidden}
@@ -164,7 +164,7 @@ section{position:relative}
 .ls{background:linear-gradient(90deg,var(--sky),var(--sky-deep))}.lt{background:linear-gradient(90deg,#3dd6d0,var(--sky))}.lg{background:linear-gradient(90deg,var(--gold),#c07800)}.ln{background:linear-gradient(90deg,#3a7fc1,var(--sky))}
 .prog-tag{display:inline-block;padding:3px 12px;border-radius:100px;font-size:9px;font-weight:700;letter-spacing:2px;text-transform:uppercase;background:rgba(91,191,222,.12);color:var(--sky);margin-bottom:12px;width:fit-content}
 .prog-card h3{font-family:'Bebas Neue',sans-serif;font-size:clamp(22px,2.5vw,32px);line-height:1;color:#fff;margin-bottom:10px}
-.prog-card p{font-size:13px;line-height:1.7;color:rgba(255,255,255,.52);flex-grow:1}
+.prog-card p{font-size:13px;line-height:1.7;color:rgba(255,255,255,.52);flex-grow:1;text-align:justify}
 .prog-rm{display:inline-flex;align-items:center;gap:6px;margin-top:16px;font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--sky);cursor:pointer;transition:gap .3s;background:none;border:none;padding:0}
 .prog-rm:hover{gap:10px}.prog-rm::after{content:'→'}
 .prog-bg{position:absolute;bottom:-16px;right:8px;font-family:'Bebas Neue',sans-serif;font-size:100px;color:rgba(255,255,255,.025);pointer-events:none;line-height:1}
@@ -179,7 +179,7 @@ section{position:relative}
 .res-card{background:rgba(255,255,255,.42);border:1px solid rgba(255,255,255,.7);border-radius:12px;padding:22px 16px;text-align:left;backdrop-filter:blur(8px);transition:all .3s;cursor:pointer}
 .res-card:hover{background:#fff;transform:translateY(-4px);box-shadow:0 18px 50px rgba(26,58,92,.2)}
 .res-card h4{font-size:14px;font-weight:700;color:var(--navy-deep);margin-bottom:5px}
-.res-card p{font-size:12px;color:rgba(26,58,92,.58);line-height:1.5}
+.res-card p{font-size:12px;color:rgba(26,58,92,.58);line-height:1.5;text-align:justify}
 .preview-wrap{max-width:920px;margin:0 auto 32px;border-radius:12px;overflow:hidden;border:2px solid rgba(255,255,255,.5);box-shadow:0 24px 60px rgba(13,31,53,.25)}
 .prev-bar{background:rgba(26,58,92,.85);padding:10px 16px;display:flex;align-items:center;gap:10px}
 .pdots{display:flex;gap:5px}.pdots span{width:11px;height:11px;border-radius:50%}
@@ -258,9 +258,23 @@ footer{padding:50px 6vw 32px;background:#040d18;text-align:center;border-top:1px
 .modal-x:hover{background:rgba(255,85,85,.2);color:#ff5555}
 .modal-tag{display:inline-block;padding:3px 12px;border-radius:100px;font-size:9px;font-weight:700;letter-spacing:2px;text-transform:uppercase;background:rgba(91,191,222,.12);color:var(--sky);margin-bottom:12px}
 .modal h2{font-family:'Bebas Neue',sans-serif;font-size:36px;color:#fff;margin-bottom:16px;line-height:1}
-.modal p{font-size:14px;line-height:1.8;color:rgba(255,255,255,.66);margin-bottom:13px}
+.modal p{font-size:14px;line-height:1.8;color:rgba(255,255,255,.66);margin-bottom:13px;text-align:justify}
 .modal-cta{display:inline-flex;align-items:center;gap:10px;margin-top:14px;padding:12px 22px;background:var(--sky);color:var(--navy-deep);font-weight:800;font-size:11px;letter-spacing:2px;text-transform:uppercase;border-radius:6px;text-decoration:none;transition:all .3s}
 .modal-cta:hover{background:#fff;transform:translateY(-2px)}
+
+
+/* ═══ COMISIONES ═══ */
+.com-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;max-width:960px;margin:44px auto 36px}
+.com-card{background:rgba(255,255,255,.38);border:1px solid rgba(255,255,255,.65);border-radius:14px;padding:20px 18px;display:flex;gap:14px;align-items:flex-start;backdrop-filter:blur(8px);transition:all .3s;text-align:left}
+.com-card:hover{background:#fff;transform:translateY(-3px);box-shadow:0 16px 48px rgba(26,58,92,.22)}
+.com-num{font-family:'Bebas Neue',sans-serif;font-size:28px;color:var(--navy);opacity:.3;line-height:1;flex-shrink:0;min-width:32px}
+.com-info h4{font-size:13px;font-weight:700;color:var(--navy-deep);margin-bottom:5px;line-height:1.35;text-align:justify}
+.com-info p{font-size:11.5px;color:rgba(26,58,92,.6);line-height:1.55;text-align:justify}
+
+
+/* ═══ DASHBOARD ═══ */
+.dash-wrap{max-width:1100px;margin:0 auto;border-radius:12px;overflow:hidden;border:1px solid rgba(91,191,222,.2);box-shadow:0 24px 60px rgba(0,0,0,.4)}
+.dash-ph{width:100%;height:560px;background:linear-gradient(135deg,#0d1f35,#071528);display:flex;align-items:center;justify-content:center}
 
 /* ═══ REVEAL ═══ */
 .reveal{opacity:0;transform:translateY(32px);transition:opacity .7s ease,transform .7s ease}
@@ -348,8 +362,10 @@ footer{padding:50px 6vw 32px;background:#040d18;text-align:center;border-top:1px
   .prog-card p{font-size:12px}
   .prog-bg{font-size:80px}
 
-  /* RECURSOS */
+  /* RECURSOS/COMISIONES */
   #recursos{padding:64px 5vw;clip-path:polygon(0 3%,100% 0,100% 97%,0 100%)}
+  .com-grid{grid-template-columns:1fr;gap:12px;margin:28px auto 24px}
+  .com-card{padding:16px 14px}
   .res-cards{grid-template-columns:1fr 1fr;gap:10px;margin:28px auto 20px}
   .res-card{padding:16px 13px}
   .res-card h4{font-size:12px}
@@ -357,6 +373,10 @@ footer{padding:50px 6vw 32px;background:#040d18;text-align:center;border-top:1px
   #driveFrame{height:280px}
   .frame-ph{height:280px}
   .drive-btn{padding:13px 24px;font-size:11px}
+
+  /* DASHBOARD */
+  .dash-ph{height:360px}
+  #dashFrame{height:360px !important}
 
   /* FOOTER */
   footer{padding:36px 5vw 24px}
@@ -395,6 +415,68 @@ footer{padding:50px 6vw 32px;background:#040d18;text-align:center;border-top:1px
   .obj-grid{grid-template-columns:1fr}
 }
 </style>
+<script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.0/firebase-app.js";
+  import { getDatabase, ref, set, onValue } from "https://www.gstatic.com/firebasejs/11.6.0/firebase-database.js";
+  import { getAuth, signInWithEmailAndPassword, signOut, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/11.6.0/firebase-auth.js";
+
+  const firebaseConfig = {
+    apiKey: "AIzaSyCOIV2gQ8_qRu3ALTPYGwxZwIdRKf1f0jM",
+    authDomain: "samuelsga-127ef.firebaseapp.com",
+    databaseURL: "https://samuelsga-127ef-default-rtdb.firebaseio.com",
+    projectId: "samuelsga-127ef",
+    storageBucket: "samuelsga-127ef.firebasestorage.app",
+    messagingSenderId: "810308976014",
+    appId: "1:810308976014:web:5495c99c23e9af9c25f8df",
+    measurementId: "G-9PDVVXTH6W"
+  };
+
+  const app = initializeApp(firebaseConfig);
+  const db  = getDatabase(app);
+  const auth = getAuth(app);
+
+  // ── DB helpers ──
+  window._fbSet = (path, val) => set(ref(db, path), val);
+
+  // ── Auth helpers ──
+  window._fbLogin = (email, password) =>
+    signInWithEmailAndPassword(auth, email, password);
+
+  window._fbLogout = () => signOut(auth);
+
+  // ── Auth state → show/hide admin panel ──
+  onAuthStateChanged(auth, (user) => {
+    window.authed = !!user;
+    if (!user) {
+      // If panel was open, close it
+      const panel = document.getElementById('adminPanel');
+      if (panel && panel.classList.contains('active')) {
+        panel.classList.remove('active');
+        document.body.style.overflow = '';
+      }
+    }
+  });
+
+  // ── Realtime data listener (public, no auth needed) ──
+  onValue(ref(db, 'mnm17'), (snap) => {
+    const data = snap.val();
+    if (!data) return;
+    const link = data.mainLink || data.biUrl;
+    if (link) {
+      window.mainLink = link;
+      window.biUrl = link;
+      if (typeof loadFrame === 'function') loadFrame(link);
+      if (typeof loadDash  === 'function') loadDash(link);
+    }
+    if (data.resources) {
+      const list = Object.values(data.resources);
+      if (typeof renderRes === 'function') renderRes(list);
+    }
+  });
+
+  window._fbReady = true;
+  document.dispatchEvent(new Event('fbReady'));
+</script>
 </head>
 <body>
 
@@ -419,7 +501,7 @@ footer{padding:50px 6vw 32px;background:#040d18;text-align:center;border-top:1px
         <div class="bs-fi-item"><div class="bs-fi-label">Estado / Status</div><div class="bs-fi-value g" id="bsStatus">CARGANDO...</div></div>
         <div class="bs-fi-item"><div class="bs-fi-label">Voluntarios</div><div class="bs-fi-value">700+ VOL.</div></div>
         <div class="bs-fi-item"><div class="bs-fi-label">SGA</div><div class="bs-fi-value">SAMUEL J.</div></div>
-        <div class="bs-fi-item"><div class="bs-fi-label">Periodo</div><div class="bs-fi-value">XVII &middot; 2026</div></div>
+        <div class="bs-fi-item"><div class="bs-fi-label">Período</div><div class="bs-fi-value">XVII &middot; 2026</div></div>
       </div>
     </div>
     <div class="bs-bottom">
@@ -431,12 +513,12 @@ footer{padding:50px 6vw 32px;background:#040d18;text-align:center;border-top:1px
   <div class="bs-ticker">
     <div class="bs-ticker-inner">
       <span>MINUME XVII &middot; TRASCIENDE FRONTERAS</span>
-      <span>SGA SAMUEL JIMENEZ &middot; SECRETARIO GENERAL ACADEMICO</span>
+      <span>SGA SAMUEL JIMÉNEZ &middot; SECRETARIO GENERAL ACADÉMICO</span>
       <span>VUELO MNM-017 &middot; 700+ VOLUNTARIOS A BORDO</span>
-      <span>DESTINO: EXCELENCIA ACADEMICA</span>
-      <span>ACADEMIA FARO &middot; DELEGAME &middot; MINUME CONTIGO &middot; BANCO ACADEMICO</span>
+      <span>DESTINO: EXCELENCIA ACADÉMICA</span>
+      <span>ACADEMIA FARO &middot; DELEGAME &middot; MINUME CONTIGO &middot; BANCO ACADÉMICO</span>
       <span>MINUME XVII &middot; TRASCIENDE FRONTERAS</span>
-      <span>SGA SAMUEL JIMENEZ &middot; SECRETARIO GENERAL ACADEMICO</span>
+      <span>SGA SAMUEL JIMÉNEZ &middot; SECRETARIO GENERAL ACADÉMICO</span>
       <span>VUELO MNM-017 &middot; 700+ VOLUNTARIOS A BORDO</span>
     </div>
   </div>
@@ -454,6 +536,7 @@ footer{padding:50px 6vw 32px;background:#040d18;text-align:center;border-top:1px
     <li><a href="#mapa">Destinos</a></li>
     <li><a href="#programas">Programas</a></li>
     <li><a href="#recursos">Recursos</a></li>
+    <li><a href="#dashboard">Dashboard</a></li>
   </ul>
   <button class="nav-admin-btn" onclick="authed?showPanel():showLogin()">Admin</button>
   <button class="hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></button>
@@ -466,6 +549,7 @@ footer{padding:50px 6vw 32px;background:#040d18;text-align:center;border-top:1px
   <a href="#mapa" onclick="toggleMenu()">Destinos</a>
   <a href="#programas" onclick="toggleMenu()">Programas</a>
   <a href="#recursos" onclick="toggleMenu()">Recursos</a>
+  <a href="#dashboard" onclick="toggleMenu()">Dashboard</a>
   <a href="#" onclick="toggleMenu();setTimeout(()=>{authed?showPanel():showLogin()},200)" style="color:var(--sky);border-top:1px solid rgba(91,191,222,.2);padding-top:18px;margin-top:4px">Admin</a>
 </div>
 
@@ -497,21 +581,20 @@ footer{padding:50px 6vw 32px;background:#040d18;text-align:center;border-top:1px
     </svg>
   </div>
   <div class="hero-content">
-    <div class="hero-eyebrow">Secretaria General Academica &middot; Samuel Jimenez</div>
+    <div class="hero-eyebrow">Secretaría General Académica &middot; Samuel Jiménez</div>
     <h1 class="hero-title">
-      <span>MINUME</span>
-      <span class="solid">XVII</span>
-      <span class="outline">Trasciende</span>
+      <span>MINUME <span class="solid">XVII</span></span>
+      <span class="outline">TRASCIENDE FRONTERAS</span>
     </h1>
-    <p class="hero-sub">Las fronteras no siempre son geograficas.</p>
+    <p class="hero-sub">Las fronteras no siempre son geográficas.</p>
     <div class="hero-ctas">
       <a href="#programas" class="btn-p">Explorar Programas</a>
-      <a href="#causa" class="btn-o">Nuestra Mision</a>
+      <a href="#causa" class="btn-o">Nuestra Misión</a>
     </div>
     <div class="hero-stats">
       <div><div class="stat-num">700+</div><div class="stat-lbl">Voluntarios</div></div>
       <div><div class="stat-num">8</div><div class="stat-lbl">Programas</div></div>
-      <div><div class="stat-num">XVII</div><div class="stat-lbl">Edicion</div></div>
+      <div><div class="stat-num">XVII</div><div class="stat-lbl">Edición</div></div>
       <div><div class="stat-num">&#8734;</div><div class="stat-lbl">Fronteras</div></div>
     </div>
   </div>
@@ -526,17 +609,17 @@ footer{padding:50px 6vw 32px;background:#040d18;text-align:center;border-top:1px
   </div>
   <div class="causa-grid reveal">
     <div class="causa-text">
-      <p>Un porcentaje significativo de jovenes dominicanos enfrentan hoy barreras que limitan su futuro: bajos niveles de competencia en areas clave como ciencias, matematicas y lectura, dificultades para acceder a oportunidades educativas o laborales, y altas tasas de desempleo.</p>
-      <p>A esto se suma la falta de orientacion hacia carreras con mayor proyeccion y las barreras adicionales que enfrentan los jovenes con capacidades diferenciadas. Esta realidad evidencia la urgencia de impulsar iniciativas que amplien oportunidades, fortalezcan habilidades y garanticen que cada joven pueda desarrollar plenamente su potencial.</p>
+      <p>Un porcentaje significativo de jóvenes dominicanos enfrentan hoy barreras que limitan su futuro: bajos niveles de competencia en áreas clave como ciencias, matemáticas y lectura, dificultades para acceder a oportunidades educativas o laborales, y altas tasas de desempleo.</p>
+      <p>A esto se suma la falta de orientación hacia carreras con mayor proyección y las barreras adicionales que enfrentan los jóvenes con capacidades diferenciadas. Esta realidad evidencia la urgencia de impulsar iniciativas que amplien oportunidades, fortalezcan habilidades y garanticen que cada joven pueda desarrollar plenamente su potencial.</p>
     </div>
     <div class="causa-vis">
       <div class="ccard ccard-m">
         <div class="ccard-num">700+</div>
-        <div class="ccard-txt">Voluntarios conectados aportando ideas, propuestas y vision de futuro para la Republica Dominicana.</div>
+        <div class="ccard-txt">Voluntarios conectados aportando ideas, propuestas y visión de futuro para la República Dominicana.</div>
       </div>
       <div class="ccard ccard-s">
-        <div class="ccard-num">XVII</div>
-        <div class="ccard-txt">Periodos de sesiones construyendo lideres que trascienden fronteras y transforman su entorno.</div>
+        <div class="ccard-num">MINUME XVII</div>
+        <div class="ccard-txt">Períodos de sesiones construyendo líderes que trascienden fronteras y transforman su entorno.</div>
       </div>
     </div>
   </div>
@@ -549,17 +632,17 @@ footer{padding:50px 6vw 32px;background:#040d18;text-align:center;border-top:1px
     <h2 class="sec-title">OBJETIVOS</h2>
   </div>
   <div class="obj-grid">
-    <div class="obj-card reveal"><div class="obj-num">01</div><h3>Excelencia Academica</h3><p>Conducir a los estudiantes hacia un destino de excelencia donde sean capaces de crear sus propias oportunidades y trascender sus propios limites.</p></div>
-    <div class="obj-card reveal"><div class="obj-num">02</div><h3>Liderazgo Integro</h3><p>Formar lideres que destaquen en politica, economia, ciencia, tecnologia y comunicacion, con vision global y valores solidos.</p></div>
-    <div class="obj-card reveal"><div class="obj-num">03</div><h3>Competencias Educativas</h3><p>Promover el maximo desarrollo de las competencias educativas en cada delegado, preparandolos para los desafios del siglo XXI.</p></div>
-    <div class="obj-card reveal"><div class="obj-num">04</div><h3>Desarrollo Profesional</h3><p>Sentar las bases solidas para el desarrollo profesional y laboral de cada participante, con herramientas reales y aplicables.</p></div>
+    <div class="obj-card reveal"><div class="obj-num">01</div><h3>Excelencia Académica</h3><p>Conducir a los estudiantes hacia un destino de excelencia donde sean capaces de crear sus propias oportunidades y trascender sus propios límites.</p></div>
+    <div class="obj-card reveal"><div class="obj-num">02</div><h3>Liderazgo Integro</h3><p>Formar líderes que destaquen en política, economía, ciencia, tecnología y comunicación, con visión global y valores sólidos.</p></div>
+    <div class="obj-card reveal"><div class="obj-num">03</div><h3>Competencias Educativas</h3><p>Promover el máximo desarrollo de las competencias educativas en cada delegado, preparándolos para los desafíos del siglo XXI.</p></div>
+    <div class="obj-card reveal"><div class="obj-num">04</div><h3>Desarrollo Profesional</h3><p>Sentar las bases sólidas para el desarrollo profesional y laboral de cada participante, con herramientas reales y aplicables.</p></div>
   </div>
 </section>
 
 <!-- MAPA -->
 <section id="mapa">
   <div class="reveal" style="text-align:center;margin-bottom:46px">
-    <div class="sec-label">Rutas Academicas</div>
+    <div class="sec-label">Rutas Académicas</div>
     <h2 class="sec-title">DESTINOS DE CONOCIMIENTO</h2>
     <p class="sec-intro">Cada programa es un destino. Cada delegado, un viajero rumbo a la excelencia.</p>
   </div>
@@ -583,19 +666,19 @@ footer{padding:50px 6vw 32px;background:#040d18;text-align:center;border-top:1px
     </svg>
     <div class="dest-pins">
       <div class="dest-pin" style="left:22%;top:44%"><div class="pin-bubble"><div class="pin-name">SANTO DOMINGO</div><div class="pin-prog">Base de Operaciones</div></div><div class="pin-tail"></div><div class="pin-dot"></div></div>
-      <div class="dest-pin" style="left:44%;top:28%"><div class="pin-bubble"><div class="pin-name">ACADEMIA FARO</div><div class="pin-prog">Formacion Integral</div></div><div class="pin-tail"></div><div class="pin-dot"></div></div>
+      <div class="dest-pin" style="left:44%;top:28%"><div class="pin-bubble"><div class="pin-name">ACADEMIA FARO</div><div class="pin-prog">Formación Integral</div></div><div class="pin-tail"></div><div class="pin-dot"></div></div>
       <div class="dest-pin" style="left:62%;top:22%"><div class="pin-bubble"><div class="pin-name">DELEGAME</div><div class="pin-prog">Plataforma Digital</div></div><div class="pin-tail"></div><div class="pin-dot"></div></div>
-      <div class="dest-pin" style="left:76%;top:36%"><div class="pin-bubble"><div class="pin-name">BANCO ACADEMICO</div><div class="pin-prog">Repositorio Nacional</div></div><div class="pin-tail"></div><div class="pin-dot"></div></div>
-      <div class="dest-pin" style="left:17%;top:72%"><div class="pin-bubble"><div class="pin-name">MINUME CONTIGO</div><div class="pin-prog">Mentoria</div></div><div class="pin-tail"></div><div class="pin-dot"></div></div>
+      <div class="dest-pin" style="left:76%;top:36%"><div class="pin-bubble"><div class="pin-name">BANCO ACADÉMICO</div><div class="pin-prog">Repositorio Nacional</div></div><div class="pin-tail"></div><div class="pin-dot"></div></div>
+      <div class="dest-pin" style="left:17%;top:72%"><div class="pin-bubble"><div class="pin-name">MINUME CONTIGO</div><div class="pin-prog">Mentoría</div></div><div class="pin-tail"></div><div class="pin-dot"></div></div>
       <div class="dest-pin" style="left:52%;top:60%"><div class="pin-bubble"><div class="pin-name">ELECTIVAS</div><div class="pin-prog">Libertad Curricular</div></div><div class="pin-tail"></div><div class="pin-dot"></div></div>
     </div>
   </div>
   <div class="route-cards reveal">
-    <div class="route-card"><div class="route-code">SDQ</div><div class="route-name">Santo Domingo</div><div class="route-arr">&#8594;</div><div class="route-dest">Accion que Trasciende</div></div>
-    <div class="route-card"><div class="route-code">FAR</div><div class="route-name">Academia FARO</div><div class="route-arr">&#8594;</div><div class="route-dest">Excelencia Academica</div></div>
-    <div class="route-card"><div class="route-code">CTG</div><div class="route-name">MINUME Contigo</div><div class="route-arr">&#8594;</div><div class="route-dest">Mentoria Personalizada</div></div>
+    <div class="route-card"><div class="route-code">SDQ</div><div class="route-name">Santo Domingo</div><div class="route-arr">&#8594;</div><div class="route-dest">Acción que Trasciende</div></div>
+    <div class="route-card"><div class="route-code">FAR</div><div class="route-name">Academia FARO</div><div class="route-arr">&#8594;</div><div class="route-dest">Excelencia Académica</div></div>
+    <div class="route-card"><div class="route-code">CTG</div><div class="route-name">MINUME Contigo</div><div class="route-arr">&#8594;</div><div class="route-dest">Mentoría Personalizada</div></div>
     <div class="route-card"><div class="route-code">DLG</div><div class="route-name">DeleGame</div><div class="route-arr">&#8594;</div><div class="route-dest">Aprendizaje Digital</div></div>
-    <div class="route-card"><div class="route-code">BAN</div><div class="route-name">Banco Academico</div><div class="route-arr">&#8594;</div><div class="route-dest">Repositorio Nacional</div></div>
+    <div class="route-card"><div class="route-code">BAN</div><div class="route-name">Banco Académico</div><div class="route-arr">&#8594;</div><div class="route-dest">Repositorio Nacional</div></div>
     <div class="route-card"><div class="route-code">ELC</div><div class="route-name">Electivas MINUME</div><div class="route-arr">&#8594;</div><div class="route-dest">Tu Propio Camino</div></div>
   </div>
 </section>
@@ -604,40 +687,48 @@ footer{padding:50px 6vw 32px;background:#040d18;text-align:center;border-top:1px
 <section id="programas">
   <div class="reveal" style="text-align:center;margin-bottom:52px">
     <div class="sec-label">Iniciativas en Vuelo</div>
-    <h2 class="sec-title">QUE HAREMOS</h2>
-    <p class="sec-intro">Ocho programas disenados para elevar, conectar y transformar la experiencia academica de cada participante.</p>
+    <h2 class="sec-title">¿QUÉ HAREMOS?</h2>
+    <p class="sec-intro">Ocho programas diseñados para elevar, conectar y transformar la experiencia académica de cada participante.</p>
   </div>
   <div class="prog-grid">
-    <div class="prog-card wide reveal" onclick="openModal('accion')"><div class="prog-line ls"></div><div><div class="prog-tag">Proyecto Regional</div><h3>Accion que Trasciende</h3><p>Iniciativa articulada al programa Ciudadanos al 100, orientada a consolidar la formacion civica, etica y social de los estudiantes mediante acciones reales, visibles y medibles de impacto comunitario...</p></div><button class="prog-rm">Leer mas en el manual</button><div class="prog-bg">01</div></div>
-    <div class="prog-card narrow reveal" onclick="openModal('faro')"><div class="prog-line lt"></div><div><div class="prog-tag">Programa Academico</div><h3>Academia FARO MINUME</h3><p>Plan de formacion integral articulado en cuatro ejes: Formacion, Analisis, Resultado y Orientacion. Desde pruebas de nivelacion hasta diseno curricular adaptado...</p></div><button class="prog-rm">Leer mas en el manual</button><div class="prog-bg">02</div></div>
-    <div class="prog-card narrow reveal" onclick="openModal('contigo')"><div class="prog-line ln"></div><div><div class="prog-tag">Mentoria</div><h3>MINUME Contigo</h3><p>Programa estructurado de consultas y mentorias academicas disenado para acompanar a los delegados desde los Modelos Regionales hasta el Modelo Internacional...</p></div><button class="prog-rm">Leer mas en el manual</button><div class="prog-bg">03</div></div>
-    <div class="prog-card wide reveal" onclick="openModal('delegame')"><div class="prog-line lg"></div><div><div class="prog-tag">Plataforma Digital</div><h3>DeleGame</h3><p>Plataforma digital disenada para que los estudiantes aprendan de manera divertida, creativa e innovadora. Transformamos la formacion academica en una experiencia interactiva donde el conocimiento se adquiere jugando...</p></div><button class="prog-rm">Leer mas en el manual</button><div class="prog-bg">04</div></div>
-    <div class="prog-card third reveal" onclick="openModal('portavoz')"><div class="prog-line ls"></div><div><div class="prog-tag">Comunicacion</div><h3>Portavoz CLIT</h3><p>Convertir al equipo CLIT en los portavoces oficiales previos a MINUME, creando contenido educativo y motivacional con alcance regional...</p></div><button class="prog-rm">Leer mas en el manual</button><div class="prog-bg">05</div></div>
-    <div class="prog-card third reveal" onclick="openModal('pasante')"><div class="prog-line lt"></div><div><div class="prog-tag">Formacion</div><h3>Pasante MINUME</h3><p>Iniciativa formativa para voluntarios regionales egresados del MINUME, brindando experiencia practica en las areas academica y organizativa...</p></div><button class="prog-rm">Leer mas en el manual</button><div class="prog-bg">06</div></div>
-    <div class="prog-card third reveal" onclick="openModal('banco')"><div class="prog-line lg"></div><div><div class="prog-tag">Repositorio</div><h3>Banco Academico Nacional</h3><p>Recopilacion de los mejores discursos, documentos de posicion, guias de preparacion y proyectos de resolucion sobresalientes...</p></div><button class="prog-rm">Leer mas en el manual</button><div class="prog-bg">07</div></div>
-    <div class="prog-card narrow reveal" onclick="openModal('electivas')"><div class="prog-line ln"></div><div><div class="prog-tag">Libertad Curricular</div><h3>Electivas MINUME</h3><p>Modelo de libertad curricular a traves de capacitaciones formativas opcionales, otorgando al estudiante autonomia para personalizar su aprendizaje...</p></div><button class="prog-rm">Leer mas en el manual</button><div class="prog-bg">08</div></div>
+    <div class="prog-card wide reveal" onclick="openModal('accion')"><div class="prog-line ls"></div><div><div class="prog-tag">Proyecto Regional</div><h3>Acción que Trasciende</h3><p>Iniciativa articulada al programa Ciudadanos al 100, orientada a consólidar la formación cívica, ética y social de los estudiantes mediante acciones reales, visibles y medibles de impacto comunitario...</p></div><button class="prog-rm">Leer más en el manual</button><div class="prog-bg">01</div></div>
+    <div class="prog-card narrow reveal" onclick="openModal('faro')"><div class="prog-line lt"></div><div><div class="prog-tag">Programa Académico</div><h3>Academia FARO MINUME</h3><p>Plan de formación integral articulado en cuatro ejes: Formación, Análisis, Resultado y Orientación. Desde pruebas de nivelación hasta diseño curricular adaptado...</p></div><button class="prog-rm">Leer más en el manual</button><div class="prog-bg">02</div></div>
+    <div class="prog-card narrow reveal" onclick="openModal('contigo')"><div class="prog-line ln"></div><div><div class="prog-tag">Mentoría</div><h3>MINUME Contigo</h3><p>Programa estructurado de consultas y mentorías académicas diseñado para acompañar a los delegados desde los Modelos Regionales hasta el Modelo Internacional...</p></div><button class="prog-rm">Leer más en el manual</button><div class="prog-bg">03</div></div>
+    <div class="prog-card wide reveal" onclick="openModal('delegame')"><div class="prog-line lg"></div><div><div class="prog-tag">Plataforma Digital</div><h3>DeleGame</h3><p>Plataforma digital disenada para que los estudiantes aprendan de manera divertida, creativa e innovadora. Transformamos la formación académica en una experiencia interactiva donde el conocimiento se adquiere jugando...</p></div><button class="prog-rm">Leer más en el manual</button><div class="prog-bg">04</div></div>
+    <div class="prog-card third reveal" onclick="openModal('portavoz')"><div class="prog-line ls"></div><div><div class="prog-tag">Comunicación</div><h3>Portavoz CLIT</h3><p>Convertir al equipo CLIT en los portavoces oficiales previos a MINUME, creando contenido educativo y motivaciónal con alcance regional...</p></div><button class="prog-rm">Leer más en el manual</button><div class="prog-bg">05</div></div>
+    <div class="prog-card third reveal" onclick="openModal('pasante')"><div class="prog-line lt"></div><div><div class="prog-tag">Formación</div><h3>Pasante MINUME</h3><p>Iniciativa formativa para voluntarios regionales egresados del MINUME, brindando experiencia práctica en las áreas académica y organizativa...</p></div><button class="prog-rm">Leer más en el manual</button><div class="prog-bg">06</div></div>
+    <div class="prog-card third reveal" onclick="openModal('banco')"><div class="prog-line lg"></div><div><div class="prog-tag">Repositorio</div><h3>Banco Académico Nacional</h3><p>Recopilación de los mejores discursos, documentos de posición, guías de preparación y proyectos de resolución sobresalientes...</p></div><button class="prog-rm">Leer más en el manual</button><div class="prog-bg">07</div></div>
+    <div class="prog-card narrow reveal" onclick="openModal('electivas')"><div class="prog-line ln"></div><div><div class="prog-tag">Libertad Curricular</div><h3>Electivas MINUME</h3><p>Modelo de libertad curricular a través de capacitaciones formativas opcionales, otorgando al estudiante autonomía para personalizar su aprendizaje...</p></div><button class="prog-rm">Leer más en el manual</button><div class="prog-bg">08</div></div>
   </div>
 </section>
 
 <!-- RECURSOS -->
 <section id="recursos">
   <div class="reveal">
-    <div class="sec-label">Materiales de Vuelo</div>
-    <h2 class="sec-title">RECURSOS ACADEMICOS</h2>
-    <p class="sec-intro">Accede al manual completo y los materiales academicos de MINUME XVII disponibles para consulta publica.</p>
+    <div class="sec-label">Comités Oficiales</div>
+    <h2 class="sec-title">COMISIONES</h2>
+    <p class="sec-intro">Las comisiones de MINUME XVII reúnen a delegados de todo el país para debatir los grandes desafíos globales de nuestro tiempo.</p>
   </div>
-  <div class="res-cards reveal">
-    <div class="res-card" onclick="openDrive()"><h4>Manual Oficial MINUME XVII</h4><p>Documento completo con todos los programas, reglamentos y guias academicas.</p></div>
-    <div class="res-card" onclick="openDrive()"><h4>Guias de Comites</h4><p>Preparacion detallada para cada comite del modelo internacional.</p></div>
-    <div class="res-card" onclick="openDrive()"><h4>Banco Academico</h4><p>Discursos, posiciones y resoluciones destacadas de ediciones anteriores.</p></div>
-    <div class="res-card" onclick="openDrive()"><h4>Electivas MINUME</h4><p>Capacitaciones opcionales para personalizar tu trayectoria academica.</p></div>
+  <div class="com-grid reveal">
+    <div class="com-card"><div class="com-num">01</div><div class="com-info"><h4>Comisión de Estupefacientes</h4><p>Debate sobre políticas internacionales para el control de sustancias psicoactivas y estrategias de prevención y rehabilitación.</p></div></div>
+    <div class="com-card"><div class="com-num">02</div><div class="com-info"><h4>Asociación de Transporte Aéreo Internacional</h4><p>Aborda la regulación, seguridad y sostenibilidad del transporte aéreo a nivel mundial en el contexto del cambio climático.</p></div></div>
+    <div class="com-card"><div class="com-num">03</div><div class="com-info"><h4>Convención de las Naciones Unidas contra la Delincuencia Organizada Transnacional</h4><p>Analiza mecanismos de cooperación global para combatir el crimen organizado que traspasa fronteras nacionales.</p></div></div>
+    <div class="com-card"><div class="com-num">04</div><div class="com-info"><h4>UN Global Mental Health Emergency Summit</h4><p>Cumbre de emergencia para abordar la crisis mundial de salud mental, con enfoque especial en la población juvenil.</p></div></div>
+    <div class="com-card"><div class="com-num">05</div><div class="com-info"><h4>Comité de Acción Juvenil y Servicio Comunitario</h4><p>Promueve el liderazgo joven y el voluntariado como motores de transformación social en comunidades vulnerables.</p></div></div>
+    <div class="com-card"><div class="com-num">06</div><div class="com-info"><h4>Órgano Asesor de Alto Nivel sobre Inteligencia Artificial</h4><p>Examina la gobernanza ética de la IA, sus implicaciones para el empleo, la privacidad y la equidad global.</p></div></div>
+    <div class="com-card"><div class="com-num">07</div><div class="com-info"><h4>Foro Internacional de Medios, Podcast y Comunicación Digital</h4><p>Discute el impacto de los medios digitales, la desinformación y el rol de la comunicación en la democracia.</p></div></div>
+    <div class="com-card"><div class="com-num">08</div><div class="com-info"><h4>Organización Mundial de la Salud</h4><p>Trabaja en respuestas coordinadas a emergencias sanitarias globales y el acceso equitativo a servicios de salud.</p></div></div>
+    <div class="com-card"><div class="com-num">09</div><div class="com-info"><h4>Cumbre de Líderes de la Juventud de la ONU</h4><p>Espacio donde jóvenes líderes presentan propuestas concretas ante la comunidad internacional para un mundo más justo.</p></div></div>
+    <div class="com-card"><div class="com-num">10</div><div class="com-info"><h4>Foro Económico Mundial</h4><p>Analiza las tendencias económicas globales, la brecha de desigualdad y estrategias de desarrollo sostenible.</p></div></div>
+    <div class="com-card"><div class="com-num">11</div><div class="com-info"><h4>Corte Interamericana de Derechos Humanos</h4><p>Delibera sobre casos de violaciones a derechos humanos en el continente americano y vías de reparación.</p></div></div>
+    <div class="com-card"><div class="com-num">12</div><div class="com-info"><h4>Consejo de Seguridad</h4><p>Órgano principal de la ONU encargado de mantener la paz y seguridad internacionales ante conflictos y amenazas globales.</p></div></div>
   </div>
   <div class="preview-wrap reveal">
     <div class="prev-bar">
       <div class="pdots"><span class="pd1"></span><span class="pd2"></span><span class="pd3"></span></div>
       <div class="purl">drive.google.com &middot; Manual MINUME XVII</div>
     </div>
-    <div class="frame-ph" id="framePh"><p>La previsualizacion del manual aparecera aqui una vez que el administrador configure el enlace de Google Drive.</p></div>
+    <div class="frame-ph" id="framePh"><p>La previsualización aparecerá aquí cuando el administrador publique el enlace principal.</p></div>
     <iframe id="driveFrame" allowfullscreen></iframe>
   </div>
   <div class="reveal" style="text-align:center;margin-top:28px">
@@ -645,10 +736,33 @@ footer{padding:50px 6vw 32px;background:#040d18;text-align:center;border-top:1px
   </div>
 </section>
 
+<!-- DASHBOARD -->
+<section id="dashboard" style="padding:100px 6vw;background:linear-gradient(180deg,#040d18 0%,#071528 100%)">
+  <div class="reveal" style="text-align:center;margin-bottom:44px">
+    <div class="sec-label">Datos en Tiempo Real</div>
+    <h2 class="sec-title">DASHBOARD</h2>
+    <p class="sec-intro">Visualiza los datos y métricas de MINUME XVII directamente desde nuestra plataforma analítica.</p>
+  </div>
+  <div class="dash-wrap reveal">
+    <div class="prev-bar" style="border-radius:12px 12px 0 0">
+      <div class="pdots"><span class="pd1"></span><span class="pd2"></span><span class="pd3"></span></div>
+      <div class="purl">app.powerbi.com &middot; MINUME XVII Dashboard</div>
+    </div>
+    <div class="dash-ph" id="dashPh">
+      <div style="text-align:center;color:rgba(255,255,255,.3)">
+        <div style="font-size:48px;margin-bottom:14px">&#9783;</div>
+        <p style="font-size:13px;max-width:280px;text-align:center;line-height:1.6">El dashboard se mostrará automáticamente cuando el administrador publique el enlace principal desde el panel de administración.</p>
+      </div>
+    </div>
+    <iframe id="dashFrame" style="width:100%;height:560px;border:none;display:none;background:#fff" allowfullscreen></iframe>
+  </div>
+</section>
+
+
 <!-- FOOTER -->
 <footer>
   <div class="ft-logo">SAMUEL.</div>
-  <div class="ft-tag">Secretario General Academico</div>
+  <div class="ft-tag">Secretario General Académico</div>
   <div class="ft-sub">MINUME XVII &middot; Trasciende Fronteras</div>
   <div class="ft-div"></div>
   <div class="ft-copy">2026 MINUME XVII &middot; Todos los derechos reservados</div>
@@ -659,9 +773,9 @@ footer{padding:50px 6vw 32px;background:#040d18;text-align:center;border-top:1px
   <div class="login-box">
     <button class="login-x" onclick="closeLogin()">&#10005;</button>
     <div class="login-logo">MINUME</div>
-    <div class="login-sub">Panel de Administracion</div>
-    <div class="login-field"><label>Usuario</label><input type="text" id="lUser" placeholder="Usuario" autocomplete="off" autocorrect="off" autocapitalize="off"></div>
-    <div class="login-field"><label>Contrasena</label><input type="password" id="lPass" placeholder="&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;" autocomplete="off" onkeydown="if(event.key==='Enter')doLogin()"></div>
+    <div class="login-sub">Panel de Administración</div>
+    <div class="login-field"><label>Correo electrónico</label><input type="email" id="lUser" placeholder="correo@ejemplo.com" autocomplete="email" autocorrect="off" autocapitalize="off"></div>
+    <div class="login-field"><label>Contraseña</label><input type="password" id="lPass" placeholder="&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;" autocomplete="off" onkeydown="if(event.key==='Enter')doLogin()"></div>
     <button class="login-btn" onclick="doLogin()">Ingresar</button>
     <div class="login-err" id="lErr">Credenciales incorrectas. Intenta de nuevo.</div>
   </div>
@@ -671,22 +785,22 @@ footer{padding:50px 6vw 32px;background:#040d18;text-align:center;border-top:1px
 <div id="adminPanel">
   <div class="admin-inner">
     <div class="admin-bar">
-      <div><h2>Gestion de Recursos</h2><p>Administra los materiales academicos del modelo.</p></div>
+      <div><h2>Gestión de Recursos</h2><p>Gestiona el manual oficial (Drive) y el Dashboard (Power BI) de MINUME XVII.</p></div>
       <div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap">
         <div class="admin-badge">SGA &middot; Samuel</div>
-        <button class="logout-btn" onclick="logoutAdmin()">Cerrar Sesion</button>
+        <button class="logout-btn" onclick="logoutAdmin()">Cerrar Sesión</button>
       </div>
     </div>
     <div class="aform">
       <div class="frow">
         <div class="fg"><label>Nombre del Recurso</label><input type="text" id="rName" placeholder="Ej. Manual Oficial MINUME XVII"></div>
-        <div class="fg"><label>Categoria</label>
+        <div class="fg"><label>Categoría</label>
           <select id="rCat">
-            <option value="">Seleccionar</option>
+            <option value="">Selecciónar</option>
             <option value="manual">Manual Principal</option>
             <option value="comite">Guia de Comite</option>
             <option value="academia">Academia FARO</option>
-            <option value="banco">Banco Academico</option>
+            <option value="banco">Banco Académico</option>
             <option value="electiva">Electiva</option>
             <option value="otro">Otro</option>
           </select>
@@ -696,14 +810,24 @@ footer{padding:50px 6vw 32px;background:#040d18;text-align:center;border-top:1px
         <div class="drow"><input type="url" id="rLink" placeholder="https://drive.google.com/..."><button class="verify-btn" onclick="verifyLink()">Verificar</button></div>
       </div>
       <div class="fg"><label>Establecer como Manual Principal</label>
-        <select id="rMain"><option value="no">No</option><option value="yes">Si — Establecer como Manual Oficial</option></select>
+        <select id="rMain"><option value="no">No</option><option value="yes">Sí — Usar como Manual Oficial</option></select>
+        <span style="font-size:10px;color:rgba(255,255,255,.3);margin-top:4px">Este enlace se mostrará como previsualización y manual oficial.</span>
       </div>
-      <div class="fg"><label>Descripcion (opcional)</label><textarea id="rDesc" placeholder="Breve descripcion..."></textarea></div>
-      <button class="sub-btn" onclick="addResource()">Publicar Recurso</button>
+      <div class="fg" style="margin-top:4px;padding-top:20px;border-top:1px solid rgba(91,191,222,.1)">
+        <label>&#9783; Enlace Power BI — Dashboard</label>
+        <div class="drow">
+          <input type="url" id="biLink" placeholder="https://app.powerbi.com/view?r=...">
+          <button class="verify-btn" onclick="verifyBiLink()">Verificar</button>
+        </div>
+        <span style="font-size:10px;color:rgba(255,255,255,.3);margin-top:4px">Este enlace se mostrará en la sección Dashboard para todos los visitantes.</span>
+        <button class="sub-btn" onclick="saveBiLink()" style="margin-top:10px">Guardar Dashboard</button>
+      </div>
+      <div class="fg"><label>Descripción (opciónal)</label><textarea id="rDesc" placeholder="Breve descripción..."></textarea></div>
+      <button class="sub-btn" onclick="addResource()">Públicar Recurso</button>
     </div>
     <div class="res-list">
-      <div class="res-list-title">Recursos Publicados</div>
-      <div id="resCont"><p style="color:rgba(255,255,255,.25);font-size:13px;text-align:center;padding:26px 0">Aun no hay recursos publicados.</p></div>
+      <div class="res-list-title">Recursos Públicados</div>
+      <div id="resCont"><p style="color:rgba(255,255,255,.25);font-size:13px;text-align:center;padding:26px 0">Aún no hay recursos publicados.</p></div>
     </div>
   </div>
 </div>
@@ -715,7 +839,7 @@ footer{padding:50px 6vw 32px;background:#040d18;text-align:center;border-top:1px
     <div class="modal-tag" id="mTag"></div>
     <h2 id="mTitle"></h2>
     <div id="mBody"></div>
-    <a href="#" id="mCta" class="modal-cta" target="_blank">Ver mas en el Manual Oficial</a>
+    <a href="#" id="mCta" class="modal-cta" target="_blank">Ver más en el Manual Oficial</a>
   </div>
 </div>
 
@@ -740,67 +864,138 @@ const obs=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting)x.target
 document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
 
 // STATE
-let resources=JSON.parse(localStorage.getItem('mnm17_res')||'[]');
-let mainLink=localStorage.getItem('mnm17_main')||'';
+let resources=[];
+let mainLink='';
 let authed=false;
 
 // FRAME
-function loadFrame(){
-  if(!mainLink)return;
-  let e=mainLink;
-  if(mainLink.includes('drive.google.com/file/d/')){const id=mainLink.match(/\/d\/([^\/]+)/)?.[1];if(id)e='https://drive.google.com/file/d/'+id+'/preview'}
-  else if(mainLink.includes('docs.google.com'))e=mainLink.replace('/edit','/preview').replace('/view','/preview');
+function loadFrame(link){
+  const url=link||mainLink;
+  if(!url)return;
+  mainLink=url;
+  let e=url;
+  if(url.includes('drive.google.com/file/d/')){const id=url.match(/\/d\/([^\/]+)/)?.[1];if(id)e='https://drive.google.com/file/d/'+id+'/preview'}
+  else if(url.includes('docs.google.com'))e=url.replace('/edit','/preview').replace('/view','/preview');
   document.getElementById('framePh').style.display='none';
   const f=document.getElementById('driveFrame');f.src=e;f.style.display='block';
 }
 function openDrive(){if(mainLink)window.open(mainLink,'_blank')}
-loadFrame();
 
 // ADMIN ACCESS
 let buf='';
-document.addEventListener('keypress',e=>{buf+=e.key;if(buf.length>10)buf=buf.slice(-10);if(buf.endsWith('admin')){buf='';authed?showPanel():showLogin()}});
+document.addEventListener('keypress',e=>{buf+=e.key;if(buf.length>10)buf=buf.slice(-10);if(buf.endsWith('admin')){buf='';window.authed?showPanel():showLogin()}});
 window.addEventListener('hashchange',()=>{if(location.hash==='#admin-control'){history.replaceState(null,null,' ');authed?showPanel():showLogin()}});
 if(location.hash==='#admin-control'){history.replaceState(null,null,' ');showLogin()}
 
 function showLogin(){document.getElementById('adminLogin').classList.add('active');setTimeout(()=>document.getElementById('lUser').focus(),200);document.getElementById('lErr').style.display='none';document.getElementById('lUser').value='';document.getElementById('lPass').value=''}
 function closeLogin(){document.getElementById('adminLogin').classList.remove('active')}
 function doLogin(){
-  const u=document.getElementById('lUser').value.trim(),p=document.getElementById('lPass').value.trim();
-  if(u==='samuelsga'&&p==='samuelsga022026'){authed=true;closeLogin();showPanel()}
-  else{document.getElementById('lErr').style.display='block';document.getElementById('lPass').value='';document.getElementById('lPass').focus()}
+  const email = document.getElementById('lUser').value.trim();
+  const pass  = document.getElementById('lPass').value.trim();
+  const errEl = document.getElementById('lErr');
+  const btn   = document.querySelector('.login-btn');
+  if(!email||!pass){errEl.textContent='Completa todos los campos.';errEl.style.display='block';return}
+  btn.textContent='Verificando...';btn.disabled=true;
+  if(window._fbLogin){
+    window._fbLogin(email, pass)
+      .then(()=>{
+        authed=true;
+        closeLogin();
+        showPanel();
+        btn.textContent='Ingresar';btn.disabled=false;
+      })
+      .catch(()=>{
+        errEl.textContent='Credenciales incorrectas. Intenta de nuevo.';
+        errEl.style.display='block';
+        document.getElementById('lPass').value='';
+        document.getElementById('lPass').focus();
+        btn.textContent='Ingresar';btn.disabled=false;
+      });
+  } else {
+    errEl.textContent='Error de conexión. Recarga la página.';
+    errEl.style.display='block';
+    btn.textContent='Ingresar';btn.disabled=false;
+  }
 }
 function showPanel(){document.getElementById('adminPanel').classList.add('active');document.body.style.overflow='hidden';renderRes()}
-function logoutAdmin(){authed=false;document.getElementById('adminPanel').classList.remove('active');document.body.style.overflow=''}
+function logoutAdmin(){
+  if(window._fbLogout) window._fbLogout();
+  authed=false;
+  document.getElementById('adminPanel').classList.remove('active');
+  document.body.style.overflow='';
+}
 
 // ADMIN CRUD
 function addResource(){
   const name=document.getElementById('rName').value.trim(),link=document.getElementById('rLink').value.trim(),cat=document.getElementById('rCat').value,desc=document.getElementById('rDesc').value.trim(),isMain=document.getElementById('rMain').value==='yes';
   if(!name||!link){alert('Completa nombre y enlace.');return}
-  if(!link.startsWith('http')){alert('Enlace invalido.');return}
-  if(isMain){mainLink=link;localStorage.setItem('mnm17_main',link);loadFrame()}
-  resources.push({id:Date.now(),name,link,cat,desc,isMain,date:new Date().toLocaleDateString('es-DO')});
-  localStorage.setItem('mnm17_res',JSON.stringify(resources));
+  if(!link.startsWith('http')){alert('Enlace inválido.');return}
+  const res={id:Date.now(),name,link,cat,desc,isMain,date:new Date().toLocaleDateString('es-DO')};
+  resources.push(res);
+  if(isMain){
+    mainLink=link;
+    loadFrame(link);
+    if(window._fbSet) window._fbSet('mnm17/mainLink',link);
+  }
+  if(window._fbSet){
+    const obj={};resources.forEach(r=>obj['r'+r.id]=r);
+    window._fbSet('mnm17/resources',obj);
+  }
   document.getElementById('rName').value='';document.getElementById('rLink').value='';document.getElementById('rCat').value='';document.getElementById('rDesc').value='';document.getElementById('rMain').value='no';
   renderRes();
 }
-function delRes(id){resources=resources.filter(r=>r.id!==id);localStorage.setItem('mnm17_res',JSON.stringify(resources));renderRes()}
-function renderRes(){
+function delRes(id){
+  resources=resources.filter(r=>r.id!==id);
+  if(window._fbSet){const obj={};resources.forEach(r=>obj['r'+r.id]=r);window._fbSet('mnm17/resources',Object.keys(obj).length?obj:null);}
+  renderRes();
+}
+function renderRes(list){
+  if(list)resources=list;
   const c=document.getElementById('resCont');
-  if(!resources.length){c.innerHTML='<p style="color:rgba(255,255,255,.25);font-size:13px;text-align:center;padding:26px 0">Aun no hay recursos publicados.</p>';return}
-  c.innerHTML=resources.map(r=>`<div class="res-item"><div><div class="res-name">${r.name}${r.isMain?' <span style="color:var(--gold);font-size:10px">&#9733; Manual Principal</span>':''}</div><div class="res-meta">${r.cat||'Sin categoria'} &middot; ${r.date}</div></div><div class="res-btns"><button class="icon-btn" onclick="window.open('${r.link}','_blank')">&#8599;</button><button class="icon-btn del" onclick="delRes(${r.id})">&#10005;</button></div></div>`).join('');
+  if(!resources.length){c.innerHTML='<p style="color:rgba(255,255,255,.25);font-size:13px;text-align:center;padding:26px 0">Aún no hay recursos publicados.</p>';return}
+  c.innerHTML=resources.map(r=>`<div class="res-item"><div><div class="res-name">${r.name}${r.isMain?' <span style="color:var(--gold);font-size:10px">&#9733; Manual Principal</span>':''}</div><div class="res-meta">${r.cat||'Sin categoría'} &middot; ${r.date}</div></div><div class="res-btns"><button class="icon-btn" onclick="window.open('${r.link}','_blank')">&#8599;</button><button class="icon-btn del" onclick="delRes(${r.id})">&#10005;</button></div></div>`).join('');
 }
 function verifyLink(){const l=document.getElementById('rLink').value.trim();if(l.startsWith('http'))window.open(l,'_blank');else alert('Enlace invalido.')}
 
+
+// DASHBOARD POWER BI
+let biUrl = '';
+function loadDash(url){
+  const u=url||window.biUrl||biUrl;
+  if(!u)return;
+  biUrl=u;
+  document.getElementById('dashPh').style.display='none';
+  const f=document.getElementById('dashFrame');
+  f.src=u;
+  f.style.display='block';
+}
+function saveBiLink(){
+  const v=document.getElementById('biLink').value.trim();
+  if(!v||!v.startsWith('http')){alert('Enlace inválido.');return}
+  biUrl=v;
+  if(window._fbSet){
+    window._fbSet('mnm17/biUrl',v);
+  }
+  loadDash(v);
+  alert('¡Dashboard actualizado correctamente!');
+}
+function verifyBiLink(){
+  const l=document.getElementById('biLink').value.trim();
+  if(l.startsWith('http'))window.open(l,'_blank');
+  else alert('Enlace inválido.');
+}
+// Firebase handles pre-fill via onValue listener above
+
 // MODAL DATA
 const mdata={
-  accion:{tag:'Proyecto Regional',title:'Accion que Trasciende',body:`<p>Iniciativa articulada al programa Ciudadanos al 100, orientada a consolidar la formacion civica, etica y social de los estudiantes mediante acciones reales, visibles y medibles de impacto comunitario.</p><p>Cada regional identificara una problematica concreta de su comunidad y disenara una accion innovadora que contribuya a su mejora o mitigacion, desarrollando competencias ciudadanas aplicadas al contexto real.</p><p style="color:var(--sky);font-size:13px;font-weight:600">Para conocer los detalles completos, criterios de evaluacion y metodologia, consulta el Manual Oficial.</p>`},
-  faro:{tag:'Programa Academico',title:'Academia FARO MINUME',body:`<p>Programa de formacion integral articulado en cuatro ejes:</p><p><strong style="color:var(--sky)">F — Formacion</strong><br>Base solida de conocimientos en las areas clave del modelo.</p><p><strong style="color:var(--sky)">A — Analisis</strong><br>Desarrollo del pensamiento critico y la argumentacion.</p><p><strong style="color:var(--sky)">R — Resultado</strong><br>Evaluacion del impacto y medicion de logros.</p><p><strong style="color:var(--sky)">O — Orientacion</strong><br>Acompanamiento personalizado hacia la excelencia.</p><p style="color:var(--sky);font-size:13px;font-weight:600">Consulta el Manual Oficial para el plan curricular completo.</p>`},
-  contigo:{tag:'Mentoria',title:'MINUME Contigo',body:`<p>Programa estructurado de consultas y mentorias academicas disenado para acompanar a los delegados desde su participacion en los Modelos Regionales y durante la etapa previa al Modelo Internacional.</p><p>Cada delegado contara con acceso a mentores especializados que brindaran orientacion personalizada en sus areas de mayor necesidad.</p><p style="color:var(--sky);font-size:13px;font-weight:600">Ver el Manual Oficial para la estructura completa y como inscribirse.</p>`},
-  delegame:{tag:'Plataforma Digital',title:'DeleGame',body:`<p>Plataforma digital disenada para que los estudiantes aprendan de manera divertida, creativa e innovadora. Transformamos la formacion academica en una experiencia interactiva donde el conocimiento se adquiere jugando.</p><p>Los delegados podran acceder a dinamicas gamificadas, retos academicos y simulaciones de debates.</p><p style="color:var(--sky);font-size:13px;font-weight:600">Consulta el Manual Oficial para conocer las mecanicas y como acceder.</p>`},
-  portavoz:{tag:'Comunicacion Oficial',title:'Portavoz CLIT',body:`<p>Convertir al equipo CLIT en los portavoces oficiales previos a MINUME, responsables de difundir y documentar el contenido academico de forma clara, etica y atractiva, asegurando que cada taller y comision tenga alcance regional.</p><p>Sus funciones incluyen crear contenido educativo y motivacional con informacion oficial de la Secretaria General Academica.</p><p style="color:var(--sky);font-size:13px;font-weight:600">Ver el Manual Oficial para los lineamientos completos y calendario.</p>`},
-  pasante:{tag:'Programa Formativo',title:'Pasante MINUME',body:`<p>Iniciativa formativa dirigida a voluntarios regionales egresados del MINUME, orientada a brindar experiencia practica en las areas academica y organizativa del modelo.</p><p>Busca fortalecer la continuidad formativa de los egresados, permitiendoles integrarse activamente a los procesos internos de MINUME.</p><p style="color:var(--sky);font-size:13px;font-weight:600">Consulta el Manual Oficial para requisitos de postulacion y areas disponibles.</p>`},
-  banco:{tag:'Repositorio Nacional',title:'Banco Academico Nacional',body:`<p>Busca recopilar los mejores discursos, documentos de posicion, guias de preparacion de comites destacados y proyectos de resolucion sobresalientes de todas las ediciones.</p><p>A fin de que los participantes tengan referentes claros de calidad, mayor motivacion por la excelencia y proyeccion institucional.</p><p style="color:var(--sky);font-size:13px;font-weight:600">Ver el Manual Oficial para los criterios de seleccion.</p>`},
-  electivas:{tag:'Libertad Curricular',title:'Electivas MINUME',body:`<p>Modelo de libertad curricular a traves de capacitaciones formativas opcionales, otorgando al estudiante la autonomia para personalizar su aprendizaje en funcion de sus aspiraciones profesionales.</p><p>Extiende el impacto educativo hacia areas practicas y de alta demanda en el siglo XXI.</p><p style="color:var(--sky);font-size:13px;font-weight:600">Consulta el Manual Oficial para el catalogo completo de electivas disponibles.</p>`}
+  accion:{tag:'Proyecto Regional',title:'Acción que Trasciende',body:`<p>Iniciativa articulada al programa Ciudadanos al 100, orientada a consólidar la formación cívica, ética y social de los estudiantes mediante acciones reales, visibles y medibles de impacto comunitario.</p><p>Cada regional identificará una problematica concreta de su comunidad y diseñará una acción innovadora que contribuya a su mejora o mitigación, desarrollando competencias ciudadanas aplicadas al contexto real.</p><p style="color:var(--sky);font-size:13px;font-weight:600">Para conocer los detalles completos, criterios de evaluación y metodología, consulta el Manual Oficial.</p>`},
+  faro:{tag:'Programa Académico',title:'Academia FARO MINUME',body:`<p>Programa de formación integral articulado en cuatro ejes:</p><p><strong style="color:var(--sky)">F — Formación</strong><br>Base sólida de conocimientos en las áreas clave del modelo.</p><p><strong style="color:var(--sky)">A — Análisis</strong><br>Desarrollo del pensamiento crítico y la argumentación.</p><p><strong style="color:var(--sky)">R — Resultado</strong><br>Evaluación del impacto y medición de logros.</p><p><strong style="color:var(--sky)">O — Orientación</strong><br>Acompañamiento personalizado hacia la excelencia.</p><p style="color:var(--sky);font-size:13px;font-weight:600">Consulta el Manual Oficial para el plan curricular completo.</p>`},
+  contigo:{tag:'Mentoría',title:'MINUME Contigo',body:`<p>Programa estructurado de consultas y mentorías académicas diseñado para acompañar a los delegados desde su participación en los Modelos Regionales y durante la etapa previa al Modelo Internacional.</p><p>Cada delegado contará con acceso a mentores especializados que brindarán orientación personalizada en sus áreas de mayor necesidad.</p><p style="color:var(--sky);font-size:13px;font-weight:600">Ver el Manual Oficial para la estructura completa y como inscribirse.</p>`},
+  delegame:{tag:'Plataforma Digital',title:'DeleGame',body:`<p>Plataforma digital disenada para que los estudiantes aprendan de manera divertida, creativa e innovadora. Transformamos la formación académica en una experiencia interactiva donde el conocimiento se adquiere jugando.</p><p>Los delegados podrán acceder a dinámicas gamificadas, retos académicos y simulaciones de debates.</p><p style="color:var(--sky);font-size:13px;font-weight:600">Consulta el Manual Oficial para conocer las mecánicas y como acceder.</p>`},
+  portavoz:{tag:'Comunicación Oficial',title:'Portavoz CLIT',body:`<p>Convertir al equipo CLIT en los portavoces oficiales previos a MINUME, responsables de difundir y documentar el contenido académico de forma clara, ética y atractiva, asegurando que cada taller y comisión tenga alcance regional.</p><p>Sus funciónes incluyen crear contenido educativo y motivaciónal con información oficial de la Secretaría General Académica.</p><p style="color:var(--sky);font-size:13px;font-weight:600">Ver el Manual Oficial para los lineamientos completos y calendario.</p>`},
+  pasante:{tag:'Programa Formativo',title:'Pasante MINUME',body:`<p>Iniciativa formativa dirigida a voluntarios regionales egresados del MINUME, orientada a brindar experiencia práctica en las áreas académica y organizativa del modelo.</p><p>Busca fortalecer la continuidad formativa de los egresados, permitiéndoles integrarse activamente a los procesos internos de MINUME.</p><p style="color:var(--sky);font-size:13px;font-weight:600">Consulta el Manual Oficial para requisitos de postulación y áreas disponibles.</p>`},
+  banco:{tag:'Repositorio Nacional',title:'Banco Académico Nacional',body:`<p>Busca recopilar los mejores discursos, documentos de posición, guías de preparación de comités destacados y proyectos de resolución sobresalientes de todas las ediciones.</p><p>A fin de que los participantes tengan referentes claros de calidad, mayor motivación por la excelencia y proyección institucional.</p><p style="color:var(--sky);font-size:13px;font-weight:600">Ver el Manual Oficial para los criterios de selección.</p>`},
+  electivas:{tag:'Libertad Curricular',title:'Electivas MINUME',body:`<p>Modelo de libertad curricular a través de capacitaciones formativas opcionales, otorgando al estudiante la autonomía para personalizar su aprendizaje en función de sus aspiraciones profesionales.</p><p>Extiende el impacto educativo hacia áreas prácticas y de alta demanda en el siglo XXI.</p><p style="color:var(--sky);font-size:13px;font-weight:600">Consulta el Manual Oficial para el catálogo completo de electivas disponibles.</p>`}
 };
 function openModal(k){const d=mdata[k];if(!d)return;document.getElementById('mTag').textContent=d.tag;document.getElementById('mTitle').textContent=d.title;document.getElementById('mBody').innerHTML=d.body;document.getElementById('mCta').href=mainLink||'#recursos';document.getElementById('modal').classList.add('active');document.body.style.overflow='hidden'}
 function closeModal(){document.getElementById('modal').classList.remove('active');document.body.style.overflow=''}
